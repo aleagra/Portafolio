@@ -1,0 +1,43 @@
+@import url("https://fonts.cdnfonts.com/css/averta-standard");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Averta Standard", sans-serif;
+}
+body {
+  @apply h-full bg-[#f7f7f7] dark:bg-[#1c1c1c];
+}
+*::-webkit-scrollbar {
+  @apply w-[6px];
+}
+*::-webkit-scrollbar-thumb {
+  @apply h-[10px] rounded-md bg-[#898989];
+}
+.texto-blanco {
+  @apply text-white dark:text-black;
+}
+.inverted {
+  mix-blend-mode: difference;
+}
+.transparent {
+  background-color: transparent !important;
+}
+.enlarge {
+  animation: enlarge 2s forwards;
+}
+
+@keyframes enlarge {
+  from {
+    width: 20px;
+    height: 20px;
+  }
+  to {
+    width: 70px;
+    height: 70px;
+  }
+}
+a {
+  scroll-behavior: smooth;
+}
