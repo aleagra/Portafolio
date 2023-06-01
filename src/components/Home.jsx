@@ -48,7 +48,7 @@ export function Home() {
                   href="#Proyects"
                   className="flex h-[4rem] items-center gap-2 whitespace-nowrap rounded-lg  border-2 border-black bg-transparent px-3 dark:border-white dark:text-white"
                 >
-                  <span>Ver proyecyos</span>
+                  <span>Ver proyectos</span>
                 </a>
               </div>
             </div>

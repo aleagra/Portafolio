@@ -70,16 +70,20 @@ function Footer() {
                 onMouseEnter={() => handleMouseEnter(1, "div")}
                 onMouseLeave={handleMouseLeave}
                 ref={divRefs}
+                required
               />
               <input
                 autoComplete="off"
                 type="text"
-                className="rounded-md p-3 px-6 py-3 shadow-lg outline-none focus:bg-[#282828] focus:text-white dark:bg-[#282828]/30 dark:text-white dark:focus:bg-white/30 dark:focus:text-black  "
+                className="rounded-md p-3 px-6 py-3 shadow-lg outline-none focus:bg-[#282828] focus:text-white dark:bg-[#282828]/30 dark:text-white dark:focus:bg-white/30 dark:focus:text-black"
                 placeholder="Email"
                 name="email"
                 onMouseEnter={() => handleMouseEnter(1, "div")}
                 onMouseLeave={handleMouseLeave}
                 ref={divRefs}
+                required
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                title="Ingresa una direccion de correo valido"
               />
               <textarea
                 autoComplete="off"
@@ -87,10 +91,10 @@ function Footer() {
                 name="message"
                 id="message"
                 placeholder="Descripción"
-                required=""
                 onMouseEnter={() => handleMouseEnter(1, "div")}
                 onMouseLeave={handleMouseLeave}
                 ref={divRefs}
+                required
               ></textarea>
               <button
                 type="submit"
@@ -107,7 +111,6 @@ function Footer() {
             <a
               href="https://www.linkedin.com/in/alejandro-agra/"
               target="_blank"
-              className=""
             >
               <div className="flex items-center">
                 <LinkedinIcon />
