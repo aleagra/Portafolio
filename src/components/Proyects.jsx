@@ -33,8 +33,8 @@ function Proyects() {
       title: "SocialApp",
       description: "Red social",
       techStack: ["React", "Node js", "Tailwind", "Mysql"],
-      repositoryLink: "https://github.com/aleagra/Social-Media-App",
-      liveDemoLink: "#",
+      repositoryLink: "https://github.com/aleagra/SocialApp",
+      liveDemoLink: "https://social-application.web.app",
       resume:
         "Una red social construida con React y Tailwind, respaldada por una base de datos de Node.js y MySQL.Para conectarse con amigos",
       hoverColor: "ffffff",
