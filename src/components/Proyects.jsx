@@ -7,7 +7,7 @@ function Proyects() {
     useContext(MouseContext);
   const card = [
     {
-      imageSrc: "./cryptowave.png",
+      imageSrc: "./cryptoWave.png",
       title: "Cryptowave",
       description: "Crypto Wallet",
       techStack: ["React", "Node Js", "Mysql", "Tailwind"],
@@ -18,7 +18,7 @@ function Proyects() {
       hoverColor: "#2d70fd",
     },
     {
-      imageSrc: "./weatherme.png",
+      imageSrc: "./weatherMe.png",
       title: "WeatherMe",
       description: "Pagina del clima",
       techStack: ["React", "Tailwind"],
