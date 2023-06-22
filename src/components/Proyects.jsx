@@ -12,7 +12,7 @@ function Proyects() {
       description: "Crypto Wallet",
       techStack: ["React", "Node Js", "Mysql", "Tailwind"],
       repositoryLink: "https://github.com/aleagra/Proyecto-Wallet",
-      liveDemoLink: "#",
+      liveDemoLink: "https://cryptowave.web.app",
       resume:
         "Una crypto wallet ficticia con MySQL, React y Node.js para gestionar criptomonedas de forma segura, con una interfaz moderna.",
       hoverColor: "#2d70fd",
