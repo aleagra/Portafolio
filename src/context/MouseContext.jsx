@@ -1,4 +1,4 @@
-import { createContext, useRef, useState } from "react";
+import React, { createContext, useRef, useState } from "react";
 
 export const MouseContext = createContext();
 
@@ -10,7 +10,8 @@ function MouseContextProvider({ children }) {
   const divRefs = useRef([]);
   const dropletRef = useRef();
   const sizeRef = useRef({ width: "20px", height: "20px" });
-  const handleMouseEnter = (index, type) => {
+
+  const handleMouseEnter = React.useCallback((index, type) => {
     if (type === "li") {
       sizeRef.current.width = "70px";
       sizeRef.current.height = "70px";
@@ -26,11 +27,11 @@ function MouseContextProvider({ children }) {
       sizeRef.current.height = "70px";
       dropletRef.current.style.backgroundColor = "#dfd3c3";
     }
-  };
+  }, []);
 
-  const handleMouseLeave = (index, type) => {
+  const handleMouseLeave = React.useCallback((index, type) => {
     if (type === "li") {
-      liRefs.current[index].classList.remove("texto-blanco");
+      // Aquí puedes agregar alguna lógica adicional al dejar el mouse en un "li"
     } else if (type === "div") {
       dropletRef.current.style.backgroundColor = "";
     }
@@ -40,7 +41,7 @@ function MouseContextProvider({ children }) {
     dropletRef.current.classList.remove("transparent");
     dropletRef.current.classList.remove("inverted");
     dropletRef.current.style.backgroundColor = "";
-  };
+  }, []);
 
   return (
     <MouseContext.Provider
