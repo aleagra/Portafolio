@@ -1,4 +1,3 @@
-import React from "react";
 import { useEffect, useState, useContext } from "react";
 import { MouseContext } from "../context/MouseContext";
 import { HomeIcon, ThemeIcon } from "../utilities/icons";
@@ -60,7 +59,7 @@ export function Navbar() {
             <ThemeIcon />
           </a>
           <div
-            className={`absolute flex w-full bg-transparent transition duration-500 dark:text-white md:static md:w-auto ${
+            className={`absolute flex w-full transition duration-500 dark:text-white md:static md:w-auto ${
               menu
                 ? "top-[-70000px]"
                 : "top-0 max-md:bg-[#ded3c3] max-md:shadow-lg"
@@ -68,7 +67,7 @@ export function Navbar() {
           >
             <ul className="text-md mx-auto flex w-fit flex-col justify-center gap-10 text-center max-md:p-4 md:flex-row md:items-center md:gap-[4vw]">
               {links.map((item, index) => (
-                <a href={item.ref} index={item} key={index}>
+                <a href={item.ref} key={index}>
                   <li
                     className="z-30 cursor-pointer whitespace-nowrap font-bold"
                     onMouseEnter={() => handleMouseEnter(index, "li")}

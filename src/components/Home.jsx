@@ -1,11 +1,26 @@
-import React, { useContext } from "react";
-import Lottie from "lottie-react";
-import home from "../assets/home.json";
+import { useContext, useRef, useEffect } from "react";
+import lottie from "lottie-web";
 import { MouseContext } from "../context/MouseContext";
 import { motion } from "framer-motion";
+import animationData from "../assets/lottie.json";
+
 export function Home() {
-  const { pRefs, handleMouseEnter, handleMouseLeave } =
-    useContext(MouseContext);
+  const { handleMouseEnter, handleMouseLeave } = useContext(MouseContext);
+  const animationContainer = useRef(null);
+
+  useEffect(() => {
+    const animation = lottie.loadAnimation({
+      container: animationContainer.current,
+      animationData: animationData,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+    });
+
+    return () => {
+      animation.destroy();
+    };
+  }, []);
 
   return (
     <>
@@ -19,9 +34,9 @@ export function Home() {
         >
           <div className="mx-auto flex max-xl:w-[100%] max-lg:flex-col md:pt-0 2xl:w-[85%]">
             <div className="mx-auto  mt-[-5.5rem] flex w-full flex-col justify-center outline-none 2xl:w-1/2">
-              <Lottie
-                animationData={home}
-                className="mx-auto max-xl:w-full max-lg:w-[80%] max-sm:w-full 2xl:w-[90%] "
+              <div
+                ref={animationContainer}
+                className="mx-auto max-xl:w-full max-lg:w-[80%] max-sm:w-full 2xl:w-[90%] player"
               />
             </div>
             <div className=" flex w-full flex-col justify-center text-center 2xl:w-1/2">

@@ -1,8 +1,9 @@
-import { useCallback, useContext } from "react";
+import React, { useCallback, useContext, memo } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import { MouseContext } from "../context/MouseContext";
-function Background() {
+
+const Background = memo(() => {
   const { theme } = useContext(MouseContext);
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
@@ -96,6 +97,6 @@ function Background() {
       }}
     />
   );
-}
+});
 
 export default Background;

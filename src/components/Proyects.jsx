@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
+import { useContext, memo } from "react";
 import { MouseContext } from "../context/MouseContext";
 import wrapper from "./wrapper/wrapper";
 import { motion } from "framer-motion";
-function Proyects() {
+const Proyects = memo(() => {
   const { divRefs, handleMouseEnter, handleMouseLeave } =
     useContext(MouseContext);
   const card = [
     {
-      imageSrc: "./cryptoWave.png",
+      imageSrc: "./cryptowave.webp",
       title: "Cryptowave",
       description: "Crypto Wallet",
       techStack: ["React", "Node Js", "Mysql", "Tailwind"],
@@ -18,7 +18,7 @@ function Proyects() {
       hoverColor: "#2d70fd",
     },
     {
-      imageSrc: "./weatherMe.png",
+      imageSrc: "./weatherme.webp",
       title: "WeatherMe",
       description: "Pagina del clima",
       techStack: ["React", "Tailwind"],
@@ -29,7 +29,7 @@ function Proyects() {
       hoverColor: "#2d70fd",
     },
     {
-      imageSrc: "./socialapp.png",
+      imageSrc: "./socialapp.webp",
       title: "SocialApp",
       description: "Red social",
       techStack: ["React", "Node js", "Tailwind", "Mysql"],
@@ -111,6 +111,7 @@ function Proyects() {
                   <div className="z-20 flex max-md:gap-6 max-sm:text-sm">
                     <a
                       target="_blank"
+                      rel="noreferrer"
                       href={item.repositoryLink}
                       className="m-auto w-[46%] rounded-md bg-black p-2 text-white shadow-lg dark:bg-white dark:text-black max-sm:px-0"
                     >
@@ -120,6 +121,7 @@ function Proyects() {
                     </a>
                     <a
                       target="_blank"
+                      rel="noreferrer"
                       href={item.liveDemoLink}
                       className="m-auto w-[46%] rounded-md bg-black p-2 text-white shadow-lg dark:bg-white dark:text-black max-sm:px-0"
                     >
@@ -134,5 +136,5 @@ function Proyects() {
       </section>
     </>
   );
-}
+});
 export default wrapper(Proyects, { id: "Proyects" });

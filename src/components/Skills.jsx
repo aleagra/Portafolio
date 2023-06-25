@@ -1,7 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, useMemo } from "react";
 import { MouseContext } from "../context/MouseContext";
 import Wrapper from "./wrapper/wrapper";
 import { motion } from "framer-motion";
+
 function Skills() {
   const skills = [
     { name: "React JS", imgSrc: "react.svg" },
@@ -15,8 +16,31 @@ function Skills() {
     { name: "Bootstrap", imgSrc: "bootstrap.svg" },
     { name: "SASS", imgSrc: "sass.svg" },
   ];
+
   const { divRefs, handleMouseEnter, handleMouseLeave } =
     useContext(MouseContext);
+
+  const skillItems = useMemo(
+    () =>
+      skills.map(({ name, imgSrc }, key) => (
+        <div
+          className="cursor-pointer rounded-xl bg-white p-4 shadow-lg transition-colors  hover:bg-[#1c1c1c]/70 hover:text-white dark:bg-[#282828] dark:text-white dark:hover:bg-white/70 dark:hover:text-black max-md:w-[55%] max-sm:w-[45%] max-sm:p-0 sm:w-[44%] lg:w-[23%] "
+          onMouseEnter={() => handleMouseEnter(1, "div")}
+          onMouseLeave={handleMouseLeave}
+          ref={divRefs}
+          key={key}
+        >
+          <img
+            src={imgSrc}
+            alt=""
+            className="card m-auto h-12 w-12 p-2 2xl:h-20 2xl:w-20"
+          />
+          <h1 className="my-2 text-center dark:opacity-100">{name}</h1>
+        </div>
+      )),
+    [skills, handleMouseEnter, handleMouseLeave, divRefs]
+  );
+
   return (
     <>
       <section
@@ -38,22 +62,7 @@ function Skills() {
         >
           <div className="z-20 flex h-fit items-center justify-center">
             <div className="flex flex-wrap justify-center gap-6">
-              {skills.map(({ name, imgSrc }, key) => (
-                <div
-                  className="cursor-pointer rounded-xl bg-white p-4 shadow-lg transition-colors  hover:bg-[#1c1c1c]/70 hover:text-white dark:bg-[#282828] dark:text-white dark:hover:bg-white/70 dark:hover:text-black max-md:w-[55%] max-sm:w-[45%] max-sm:p-0 sm:w-[44%] lg:w-[23%] "
-                  onMouseEnter={() => handleMouseEnter(1, "div")}
-                  onMouseLeave={handleMouseLeave}
-                  ref={divRefs}
-                  key={key}
-                >
-                  <img
-                    src={imgSrc}
-                    alt=""
-                    className="card m-auto h-12 w-12 p-2 2xl:h-20 2xl:w-20"
-                  />
-                  <h1 className="my-2 text-center dark:opacity-100">{name}</h1>
-                </div>
-              ))}
+              {skillItems}
             </div>
           </div>
         </motion.div>
@@ -61,4 +70,5 @@ function Skills() {
     </>
   );
 }
+
 export default Wrapper(Skills);

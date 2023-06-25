@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { MouseContext } from "../context/MouseContext";
 import Wrapper from "./wrapper/wrapper";
 import { motion } from "framer-motion";

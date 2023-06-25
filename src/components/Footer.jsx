@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import { useState, useContext } from "react";
 import emailjs from "emailjs-com";
 import { MouseContext } from "../context/MouseContext";
 import { GitIcon, LinkedinIcon, MailIcon } from "../utilities/icons";
@@ -35,7 +35,7 @@ function Footer() {
         <div className="z-20 mx-auto flex w-fit flex-col px-20 text-center  dark:text-white max-md:px-0 max-md:pt-8 xl:mt-[5.5rem]">
           <p
             className="cursor-pointer whitespace-nowrap text-lg opacity-40 2xl:text-xl"
-            onClick={(e) => {
+            onClick={() => {
               window.location.href =
                 "mailto:aleagrat5@gmail.com?subject=Asunto del correo electrónico&body=";
             }}
@@ -111,6 +111,7 @@ function Footer() {
             <a
               href="https://www.linkedin.com/in/alejandro-agra/"
               target="_blank"
+              rel="noreferrer"
             >
               <div className="flex items-center">
                 <LinkedinIcon />
@@ -124,7 +125,11 @@ function Footer() {
                 </h1>
               </div>
             </a>
-            <a href="https://github.com/aleagra" target="_blank">
+            <a
+              href="https://github.com/aleagra"
+              target="_blank"
+              rel="noreferrer"
+            >
               <div className="flex items-center">
                 <GitIcon />
                 <h1
@@ -140,7 +145,7 @@ function Footer() {
 
             <div
               className="flex cursor-pointer items-center"
-              onClick={(e) => {
+              onClick={() => {
                 window.location.href =
                   "mailto:aleagrat5@gmail.com?subject=Asunto del correo electrónico&body=";
               }}

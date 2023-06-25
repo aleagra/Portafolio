@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useRef } from "react";
+import { useEffect, useContext, useRef } from "react";
 import { MouseContext } from "../context/MouseContext";
 import { motion } from "framer-motion";
 
