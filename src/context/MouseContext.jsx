@@ -31,7 +31,6 @@ function MouseContextProvider({ children }) {
 
   const handleMouseLeave = React.useCallback((index, type) => {
     if (type === "li") {
-      // Aquí puedes agregar alguna lógica adicional al dejar el mouse en un "li"
     } else if (type === "div") {
       dropletRef.current.style.backgroundColor = "";
     }

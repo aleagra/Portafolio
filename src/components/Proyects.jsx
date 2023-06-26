@@ -112,6 +112,7 @@ const Proyects = memo(() => {
                     <a
                       target="_blank"
                       rel="noreferrer"
+                      aria-label="Repositorio"
                       href={item.repositoryLink}
                       className="m-auto w-[46%] rounded-md bg-black p-2 text-white shadow-lg dark:bg-white dark:text-black max-sm:px-0"
                     >
@@ -122,6 +123,7 @@ const Proyects = memo(() => {
                     <a
                       target="_blank"
                       rel="noreferrer"
+                      aria-label="Demo"
                       href={item.liveDemoLink}
                       className="m-auto w-[46%] rounded-md bg-black p-2 text-white shadow-lg dark:bg-white dark:text-black max-sm:px-0"
                     >
