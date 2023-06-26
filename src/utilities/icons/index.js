@@ -1,3 +1,4 @@
+export { default as BarsIcon } from './BarsIcon';
 export { default as DownloadIcon } from './DownloadIcon';
 export { default as GitIcon } from './GitIcon';
 export { default as HomeIcon } from './HomeIcon';
