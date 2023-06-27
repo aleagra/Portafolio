@@ -63,14 +63,14 @@ const Proyects = memo(() => {
             {card.map((item, index) => (
               <div
                 key={index}
-                className="relative flex h-full flex-col rounded-lg bg-white/40  shadow-xl dark:bg-[#282828]/40 max-lg:m-auto max-sm:w-[95%] lg:w-[31%] xl:w-[23%] 
+                className="relative flex h-full flex-col rounded-lg bg-white/40  shadow-xl dark:bg-[#282828]/40 max-lg:m-auto max-sm:w-[95%] lg:w-[31%] xl:w-[26%] 
                 "
                 onMouseEnter={() => handleMouseEnter(index, "div")}
                 onMouseLeave={handleMouseLeave}
                 ref={divRefs}
               >
                 <img
-                  className="h-[300px] w-full rounded-lg max-2xl:h-[220px]"
+                  className="h-fit w-full rounded-lg max-2xl:h-[250px] max-md:object-cover"
                   src={item.imageSrc}
                   alt=""
                 />

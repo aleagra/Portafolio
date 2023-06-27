@@ -38,10 +38,10 @@ export function Home() {
               className="mx-auto max-xl:w-full max-lg:w-[80%] max-sm:w-full 2xl:w-[90%] player"
             />
           </div>
-          <div className="flex w-full flex-col justify-center text-center 2xl:w-1/2">
-            <div className="z-20 flex flex-col justify-center max-2xl:px-10 max-md:px-0">
+          <div className="flex w-full flex-col justify-center items-center text-center 2xl:w-1/2">
+            <div className="z-20 w-fit flex flex-col justify-center items-center max-2xl:px-10 max-2xl:mx-auto max-md:px-0">
               <span
-                className="m-0 p-0 text-[6rem] font-bold leading-[8rem] text-black dark:text-[#dfd3c3] max-lg:text-[4rem] max-sm:text-[2rem] max-sm:leading-[5rem]"
+                className="m-0 p-0 text-[6rem] font-bold leading-[7rem] text-black dark:text-[#dfd3c3] max-2xl:text-[5rem] max-lg:text-[4rem] max-sm:text-[2rem] max-sm:leading-[5rem]"
                 onMouseEnter={() => handleMouseEnter(1, "p")}
                 onMouseLeave={() => handleMouseLeave(1, "p")}
               >
