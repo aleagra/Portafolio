@@ -10,11 +10,11 @@ const Proyects = memo(() => {
       imageSrc: "./cryptowave.webp",
       title: "Cryptowave",
       description: "Crypto Wallet",
-      techStack: ["React", "Node Js", "Mysql", "Tailwind"],
+      techStack: ["React", "Tailwind"],
       repositoryLink: "https://github.com/aleagra/Proyecto-Wallet",
       liveDemoLink: "https://cryptowave.web.app",
       resume:
-        "Una crypto wallet ficticia con MySQL, React y Node.js para gestionar criptomonedas de forma segura, con una interfaz moderna.",
+        "Landing page de una crypto wallet con React para gestionar criptomonedas de forma segura, con una interfaz moderna.",
       hoverColor: "#2d70fd",
     },
     {
@@ -30,13 +30,13 @@ const Proyects = memo(() => {
     },
     {
       imageSrc: "./socialapp.webp",
-      title: "SocialApp",
+      title: "Social App",
       description: "Red social",
-      techStack: ["React", "Node js", "Tailwind", "Mysql"],
+      techStack: ["React", "Node js", "Tailwind", "Mongo DB"],
       repositoryLink: "https://github.com/aleagra/SocialApp",
       liveDemoLink: "https://social-application.web.app",
       resume:
-        "Una red social construida con React y Tailwind, respaldada por una base de datos de Node.js y MySQL.Para conectarse con amigos",
+        "Una red social construida con React y Tailwind, respaldada por una base de datos de Node.js y MySql para conectarse con amigos.",
       hoverColor: "ffffff",
     },
   ];
@@ -77,11 +77,11 @@ const Proyects = memo(() => {
                 <div
                   className={`absolute inset-0 top-0 flex flex-col  rounded-lg  bg-[#333333] text-white  opacity-0 transition-opacity  hover:opacity-100 `}
                 >
-                  <div className="p-4 text-center max-md:pt-10  2xl:p-12">
-                    <h1 className="whitespace-nowrap font-bold sm:text-3xl  2xl:text-4xl">
+                  <div className="p-4 text-center max-md:pt-12 3xl:pt-20 max-2xl:p-6 max-md:p-4  2xl:p-8">
+                    <h1 className="whitespace-nowrap my-4 font-bold sm:text-3xl  2xl:text-4xl">
                       {item.title}
                     </h1>
-                    <p className="whitespace-nowrap text-base opacity-50">
+                    <p className="whitespace-nowrap text-xl my-4 opacity-50 max-md:text-lg">
                       {item.description}
                     </p>
                     <span className="text-md max-md:text-sm ">
@@ -99,7 +99,7 @@ const Proyects = memo(() => {
                     ))}
                   </div>
                 </div>
-                <div className="flex flex-col justify-center gap-y-2 p-4 text-black dark:text-white max-sm:p-4">
+                <div className="flex flex-col justify-center gap-y-2 p-4 py-8 text-black dark:text-white max-sm:p-4">
                   <p className="text-center text-xl font-bold uppercase">
                     {item.title}
                   </p>
@@ -108,7 +108,7 @@ const Proyects = memo(() => {
                       {item.description}
                     </p>
                   </div>
-                  <div className="z-20 flex max-md:gap-6 max-sm:text-sm">
+                  <div className="z-20 flex max-md:gap-6 max-sm:text-sm pt-6">
                     <a
                       target="_blank"
                       rel="noreferrer"

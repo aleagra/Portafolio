@@ -152,7 +152,7 @@ function Footer() {
             </a>
           ))}
           <div className="z-30 flex w-full justify-center">
-            <h1 className="">Hecho por Alejandro Agra.</h1>
+            <h1 className="select-none">Hecho por Alejandro Agra.</h1>
           </div>
         </div>
       </motion.div>
