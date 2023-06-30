@@ -56,11 +56,14 @@ function Footer() {
             onSubmit={sendEmail}
             className="mt-4 flex w-[100%] flex-col justify-center gap-y-6 max-lg:w-full"
           >
-            {message && (
-              <p className="-mb-2 rounded-md bg-emerald-400 py-2 text-center text-white">
-                {message}
-              </p>
-            )}
+            <p
+              className={` mb-2 rounded-md bg-emerald-400 py-2 text-center text-white ${
+                message ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              {message}
+            </p>
+
             {["Nombre", "Email"].map((placeholder, index) => (
               <input
                 key={index}
