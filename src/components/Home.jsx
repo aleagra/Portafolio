@@ -25,7 +25,7 @@ export function Home() {
   return (
     <motion.div
       whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
+      transition={{ duration: 0.7, ease: "easeInOut" }}
     >
       <section
         className="relative z-[1] flex h-screen select-none flex-col justify-center pt-24 max-md:pt-[8rem]"

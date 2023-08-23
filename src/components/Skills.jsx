@@ -59,7 +59,7 @@ function Skills() {
 
       <motion.div
         whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+        transition={{ duration: 0.7, ease: "easeInOut" }}
       >
         <div className="z-20 flex h-fit items-center justify-center">
           <div className="flex flex-wrap justify-center gap-6">

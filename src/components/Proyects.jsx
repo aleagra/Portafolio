@@ -57,7 +57,7 @@ const Proyects = memo(() => {
         </div>
         <motion.div
           whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
+          transition={{ duration: 0.7, ease: "easeInOut" }}
         >
           <div className="flex flex-wrap justify-center gap-8">
             {card.map((item, index) => (

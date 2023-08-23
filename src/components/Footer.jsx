@@ -49,7 +49,7 @@ function Footer() {
       </div>
       <motion.div
         whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+        transition={{ duration: 0.7, ease: "easeInOut" }}
       >
         <div className="z-10 mx-auto flex w-full gap-10 p-10 max-sm:w-full max-sm:p-6">
           <form
