@@ -26,7 +26,7 @@ const Background = memo(() => {
       options={{
         background: {
           color: {
-            value: ["dark:bg-[#1c1c1c]", "bg-[#f7f7f7]"],
+            value: ["dark:bg-[#1c1c1c]", "bg-[#ffffff]"],
           },
         },
         fpsLimit: 120,
