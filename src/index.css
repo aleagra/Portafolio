@@ -1,8 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
 body {
+  font-family: "Inter", sans-serif;
   @apply h-full bg-[#f7f7f7] dark:bg-[#1c1c1c];
 }
 *::-webkit-scrollbar {
@@ -11,9 +13,37 @@ body {
 *::-webkit-scrollbar-thumb {
   @apply h-[10px] rounded-md bg-[#898989];
 }
+
 .inverted {
   mix-blend-mode: difference;
 }
 .transparent {
   background-color: transparent !important;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 40%;
+  }
+
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+.proyects {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+
+  animation-timeline: --image;
+  animation-name: show;
+
+  animation-range: entry 40% cover 70%;
+  animation-fill-mode: both;
 }

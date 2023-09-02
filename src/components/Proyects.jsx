@@ -59,32 +59,26 @@ const Proyects = memo(() => {
         id="Proyects"
       >
         <div className="z-20 m-auto mx-auto flex w-fit flex-col justify-center py-14 text-center dark:text-white max-md:p-0 max-md:py-10">
-          {/* <p className="whitespace-nowrap text-lg opacity-40 2xl:text-xl">
-            Algunos de mis proyectos
-          </p> */}
           <h1 className="border-b-4 border-black text-[2rem] font-bold dark:border-white 2xl:text-[2.5rem]">
             Mis proyectos
           </h1>
         </div>
-        <motion.div
-          whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
-          transition={{ duration: 0.7, ease: "easeInOut" }}
-        >
-          <div className="grid grid-cols-1 w-full h-full gap-y-10 gap-8 px-[8rem]">
-            {card.map((item, index) => (
+        <div className="grid grid-cols-1 w-full h-full gap-y-[15rem] gap-8 px-[8rem]">
+          {card.map((item, index) => (
+            <motion.div
+              whileInView={{ y: [100, 0], opacity: [0, 0.5, 1] }}
+              transition={{ duration: 1 }}
+              key={index}
+            >
               <div
                 key={index}
-                className="relative flex w-full bg-[#f7f6f7]/30 shadow-lg hover:scale-105 transition-all duration-500 hover:bg-[#f7f6f7] hover:dark:bg-[#282828] cursor-pointer rounded-lg dark:bg-[#282828]/50
-                "
+                className={`proyects relative flex w-full bg-[#f7f6f7]/30 shadow-lg hover:scale-105 transition-all duration-500 hover:bg-[#f7f6f7] hover:dark:bg-[#282828] cursor-pointer rounded-lg dark:bg-[#282828]/50 ${
+                  index === 0 || index === 2 ? "flex-row" : "flex-row-reverse"
+                }`}
                 onMouseEnter={() => handleMouseEnter(index, "div")}
                 onMouseLeave={handleMouseLeave}
                 ref={divRefs}
               >
-                <img
-                  className="max-w-[550px] h-fit object-cover  rounded-md shadow-md"
-                  src={item.imageSrc}
-                  alt=""
-                />
                 <div className="flex flex-col px-5 justify-center">
                   <div className="px-8 flex flex-col justify-center items-center dark:text-white">
                     <h1 className="whitespace-nowrap font-bold sm:text-3xl 2xl:text-4xl ">
@@ -106,42 +100,15 @@ const Proyects = memo(() => {
                     ))}
                   </div>
                 </div>
-
-                {/* <div className="flex flex-col justify-center gap-y-4 items-center h-full text-black dark:text-white max-sm:p-4">
-                  <p className="text-center text-xl font-bold uppercase">
-                    {item.title}
-                  </p>
-
-                  <p className="whitespace-nowrap pb-2 text-center text-lg max-2xl:text-sm">
-                    {item.description}
-                  </p> */}
-                {/* <div className=" flex max-md:gap-6 max-sm:text-sm pt-6">
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label="Repositorio"
-                      href={item.repositoryLink}
-                      className="m-auto w-[46%] rounded-md bg-black p-2 text-white shadow-lg dark:bg-white dark:text-black max-sm:px-0"
-                    >
-                      <button className="w-full text-center">
-                        Repositorio
-                      </button>
-                    </a>
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label="Demo"
-                      href={item.liveDemoLink}
-                      className="m-auto w-[46%] rounded-md bg-black p-2 text-white shadow-lg dark:bg-white dark:text-black max-sm:px-0"
-                    >
-                      <button className="w-full text-center">Ver</button>
-                    </a>
-                  </div> */}
-                {/* </div> */}
+                <img
+                  className="max-w-[550px] h-fit object-cover rounded-md shadow-md"
+                  src={item.imageSrc}
+                  alt=""
+                />
               </div>
-            ))}
-          </div>
-        </motion.div>
+            </motion.div>
+          ))}
+        </div>
       </section>
     </>
   );

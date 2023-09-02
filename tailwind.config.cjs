@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        '3xl': '1900px', // Agrega la pantalla 2xl con un ancho mínimo de 1650px
+        '3xl': '1900px',
       },
       colors: {
       

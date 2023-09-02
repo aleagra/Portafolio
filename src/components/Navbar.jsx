@@ -41,8 +41,8 @@ export const Navbar = memo(() => {
   };
 
   return (
-    <div className="fixed z-30 w-full">
-      <div className="flex w-full justify-between p-4 max-md:px-0 md:px-20">
+    <div className="fixed z-30 w-full ">
+      <div className="flex w-full px-[8rem] justify-between p-4">
         <a
           href="#"
           className="z-30 max-md:ml-5"
