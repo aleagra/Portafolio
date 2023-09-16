@@ -4,7 +4,7 @@ const Wrapper = (Component, idName) =>
     return (
       <>
         <section
-          className="m-auto flex min-h-screen flex-col items-center justify-center "
+          className="m-auto flex min-h-screen flex-col items-center justify-center"
           id={idName}
         >
           <Component />

@@ -68,7 +68,7 @@ export const Navbar = memo(() => {
               : "top-0 max-md:bg-[#ded3c3] max-md:shadow-lg"
           }`}
         >
-          <ul className="text-md mx-auto flex w-fit flex-col justify-center gap-10 text-center max-md:p-4 md:flex-row md:items-center md:gap-[4vw]">
+          <ul className="text-md mx-auto flex w-fit flex-col font-bold justify-center gap-10 text-center max-md:p-4 md:flex-row md:items-center md:gap-[4vw]">
             {links.map((item, index) => (
               <li
                 key={index}

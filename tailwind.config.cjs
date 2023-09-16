@@ -7,6 +7,9 @@ module.exports = {
       screens: {
         '3xl': '1900px',
       },
+      fontFamily: {
+        jakarta: ['jakarta', 'sans'],
+      },
       colors: {
       
       },
