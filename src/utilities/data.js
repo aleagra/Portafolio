@@ -1,3 +1,5 @@
+import { GitIcon } from "./icons";
+
 export const proyectsData = [
     {
       imageSrc: "./Eztranslate.png",
@@ -44,3 +46,58 @@ export const proyectsData = [
       hoverColor: "#f95a5f",
     },
   ];
+  export const skills = [
+    { name: "React JS", imgSrc: "react.svg" },
+    { name: "HTML", imgSrc: "html.svg" },
+    { name: "CSS", imgSrc: "css.svg" },
+    { name: "Node JS", imgSrc: "node.svg" },
+    { name: "JavaScript", imgSrc: "javascript.svg" },
+    { name: "MySQL", imgSrc: "mysql.svg" },
+    { name: "Mongo DB", imgSrc: "mongo.svg" },
+    { name: "Tailwind", imgSrc: "tailwind.svg" },
+    { name: "Bootstrap", imgSrc: "bootstrap.svg" },
+    { name: "SASS", imgSrc: "sass.svg" },
+  ];
+
+  export const links = [
+    { ref: "#About", title: "Sobre mi", arialabel: "Sobre mi" },
+    {
+      ref: "#Proyects",
+      title: "Proyectos",
+      arialabel: "Proyectos",
+    },
+    {
+      ref: "#Skills",
+      title: "Habilidades",
+      arialabel: "Habilidades",
+    },
+    {
+      ref: "#Contact",
+      title: "Contacto",
+      arialabel: "Contacto",
+    },
+  ];
+  
+  export const footer =[
+    {
+      href: "https://www.linkedin.com/in/alejandro-agra/",
+      text: "Linkedin",
+      icon:"<GitIcon/>",
+      index: 6,
+      arialabel: "Linkedin",
+    },
+    {
+      href: "https://github.com/aleagra",
+      text: "Github",
+      icon: "<GitIcon />",
+      index: 7,
+      arialabel: "Github",
+    },
+    {
+      href: "mailto:aleagrat5@gmail.com?subject=Asunto del correo electrónico&body=",
+      text: "Correo",
+      icon: "<MailIcon />",
+      index: 8,
+      arialabel: "Mail",
+    },
+  ]

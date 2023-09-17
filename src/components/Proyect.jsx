@@ -44,7 +44,6 @@ const Proyect = ({ title, imageSrc, techStack, resume, hoverColor }) => {
               ))}
             </ul>
           </div>
-
           <img
             src={imageSrc}
             alt=""

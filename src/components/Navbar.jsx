@@ -1,6 +1,7 @@
 import React, { useEffect, useContext, useRef, memo, useState } from "react";
 import { MouseContext } from "../context/MouseContext";
 import { BarsIcon, HomeIcon, ThemeIcon } from "../utilities/icons";
+import { links } from "../utilities/data";
 
 export const Navbar = memo(() => {
   const [menu, setMenu] = useState(true);
@@ -15,25 +16,6 @@ export const Navbar = memo(() => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
-  const links = [
-    { ref: "#About", title: "Sobre mi", arialabel: "Sobre mi" },
-    {
-      ref: "#Proyects",
-      title: "Proyectos",
-      arialabel: "Proyectos",
-    },
-    {
-      ref: "#Skills",
-      title: "Habilidades",
-      arialabel: "Habilidades",
-    },
-    {
-      ref: "#Contact",
-      title: "Contacto",
-      arialabel: "Contacto",
-    },
-  ];
-
   const aRef = useRef(null);
 
   const handleLinkClick = () => {
@@ -42,7 +24,7 @@ export const Navbar = memo(() => {
 
   return (
     <div className="fixed z-30 w-full ">
-      <div className="flex w-full px-[8rem] justify-between p-4">
+      <div className="flex w-full px-[8rem] justify-between p-4 py-6">
         <a
           href="#"
           className="z-30 max-md:ml-5"
@@ -68,11 +50,11 @@ export const Navbar = memo(() => {
               : "top-0 max-md:bg-[#ded3c3] max-md:shadow-lg"
           }`}
         >
-          <ul className="text-md mx-auto flex w-fit flex-col font-bold justify-center gap-10 text-center max-md:p-4 md:flex-row md:items-center md:gap-[4vw]">
+          <ul className="text-lg mx-auto flex w-fit flex-col font-bold justify-center gap-10 text-center max-md:p-4 md:flex-row md:items-center md:gap-[4vw]">
             {links.map((item, index) => (
               <li
                 key={index}
-                className="z-30 cursor-pointer whitespace-nowrap font-bold"
+                className="z-30 cursor-pointer whitespace-nowrap"
                 onMouseEnter={() => handleMouseEnter(index, "li")}
                 onMouseLeave={() => handleMouseLeave(index, "li")}
                 ref={(el) => (liRefs.current[index] = el)}
