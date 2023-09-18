@@ -24,10 +24,10 @@ function Contact() {
       });
   }
   return (
-    <div className="z-10 mx-auto flex w-full gap-10 p-10 max-sm:w-full max-sm:p-6">
+    <div className="z-10 mx-auto flex gap-10 max-sm:w-full max-sm:p-6">
       <form
         onSubmit={sendEmail}
-        className="mt-4 flex w-[100%] flex-col justify-center gap-y-6 max-lg:w-full"
+        className="mt-4 flex w-[850px] flex-col justify-center gap-y-6 max-lg:w-full"
       >
         <p
           className={` mb-2 rounded-md bg-emerald-400 py-2 text-center text-white ${
@@ -42,7 +42,7 @@ function Contact() {
             key={index}
             autoComplete="off"
             type="text"
-            className="rounded-3xl text-xl fontbol p-3 px-6 py-3 shadow-lg outline-none focus:bg-[#282828] focus:text-white dark:bg-transparent border dark:border-white dark:text-white dark:focus:bg-white/30 dark:focus:text-black"
+            className="rounded-3xl text-xl p-3 px-6 py-3 shadow-lg outline-none focus:bg-[#282828] focus:text-white dark:bg-transparent border dark:border-white dark:text-white dark:focus:bg-white/30 dark:focus:text-black"
             placeholder={placeholder}
             name={index === 0 ? "name" : "email"}
             onMouseEnter={() => handleMouseEnter(1, "div")}

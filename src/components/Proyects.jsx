@@ -24,6 +24,7 @@ function Proyects() {
               techStack={project.techStack}
               resume={project.resume}
               hoverColor={project.hoverColor}
+              liveDemoLink={project.liveDemoLink}
             />
           </React.Fragment>
         ))}
