@@ -57,6 +57,12 @@ export const proyectsData = [
     { name: "Tailwind", imgSrc: "tailwind.svg" },
     { name: "Bootstrap", imgSrc: "bootstrap.svg" },
     { name: "SASS", imgSrc: "sass.svg" },
+    { name: "JavaScript", imgSrc: "javascript.svg" },
+    { name: "MySQL", imgSrc: "mysql.svg" },
+    { name: "Mongo DB", imgSrc: "mongo.svg" },
+    { name: "Tailwind", imgSrc: "tailwind.svg" },
+    { name: "Bootstrap", imgSrc: "bootstrap.svg" },
+    { name: "SASS", imgSrc: "sass.svg" },
   ];
 
   export const links = [

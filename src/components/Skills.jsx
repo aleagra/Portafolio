@@ -17,14 +17,14 @@ function Skills() {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 0.1 * index,
+        delay: 0.05 * index,
       },
     }),
   };
 
   return (
     <section
-      className="flex flex-col justify-center w-[1200px] px-[8rem]"
+      className="flex flex-col justify-center w-[1200px] px-[8rem] pt-[2rem]"
       id="Skills"
     >
       <div className="w-fit justify-center z-20 m-auto mx-auto flex flex-col py-16 text-center dark:text-white max-md:p-0 max-md:py-10">
@@ -33,7 +33,7 @@ function Skills() {
         </h1>
       </div>
 
-      <div className="z-20 w-[850px] mx-auto grid grid-cols-4 grid-rows-3 justify-center gap-8">
+      <div className="z-20 w-[850px] mx-auto grid grid-cols-4 grid-rows-4 justify-center gap-8">
         {skills.map(({ name, imgSrc }, index) => (
           <motion.li
             className="bg-white button list-none dark:hover:text-black borderBlack rounded-xl px-5 py-3 pt-5 dark:bg-white/10 dark:text-white/80 "

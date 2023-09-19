@@ -13,18 +13,18 @@ function MouseContextProvider({ children }) {
 
   const handleMouseEnter = React.useCallback((index, type) => {
     if (type === "li") {
-      sizeRef.current.width = "70px";
-      sizeRef.current.height = "70px";
+      dropletRef.current.style.transition = "all 0.5s";
+      dropletRef.current.style.transform = "scale(4)";
       dropletRef.current.style.backgroundColor = "#dfd3c3";
     } else if (type === "p") {
-      sizeRef.current.width = "120px";
-      sizeRef.current.height = "120px";
+      dropletRef.current.style.transition = "all 0.5s";
+      dropletRef.current.style.transform = "scale(7)";
       dropletRef.current.classList.add("inverted");
     } else if (type === "div") {
       dropletRef.current.classList.add("transparent");
     } else if (type === "a") {
-      sizeRef.current.width = "70px";
-      sizeRef.current.height = "70px";
+      dropletRef.current.style.transition = "all 0.5s";
+      dropletRef.current.style.transform = "scale(4)";
       dropletRef.current.style.backgroundColor = "#dfd3c3";
     }
   }, []);
@@ -34,8 +34,8 @@ function MouseContextProvider({ children }) {
     } else if (type === "div") {
       dropletRef.current.style.backgroundColor = "";
     }
-    sizeRef.current.width = "20px";
-    sizeRef.current.height = "20px";
+    dropletRef.current.style.transition = "all 0.5s";
+    dropletRef.current.style.transform = "scale(1)";
     dropletRef.current.classList.remove("grande");
     dropletRef.current.classList.remove("transparent");
     dropletRef.current.classList.remove("inverted");

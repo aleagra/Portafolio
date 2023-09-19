@@ -11,7 +11,7 @@ function Proyects() {
     >
       <div className="w-fit justify-center z-20 m-auto mx-auto flex flex-col py-16 text-center dark:text-white max-md:p-0 max-md:py-10">
         <h1 className="border-b-4 border-black text-[2rem] font-bold dark:border-white 2xl:text-[3rem]">
-          Habilidades
+          Mis Proyectos
         </h1>
       </div>
       <div className="w-[850px]">
@@ -32,4 +32,4 @@ function Proyects() {
     </section>
   );
 }
-export default Wrapper(Proyects);
+export default Wrapper(Proyects, "Proyects");
