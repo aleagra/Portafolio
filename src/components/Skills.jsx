@@ -45,9 +45,12 @@ function Skills() {
               once: true,
             }}
             custom={index}
+            onMouseEnter={() => handleMouseEnter(index, "div")}
+            onMouseLeave={handleMouseLeave}
+            ref={divRefs}
           >
             <img src={imgSrc} alt="" className="mx-auto w-[50px] h-[50px]" />
-            <h1 className="py-2 text-center dark:opacity-100 font-bold">
+            <h1 className="py-2 text-center dark:opacity-100 font-bold select-none">
               {name}
             </h1>
           </motion.li>

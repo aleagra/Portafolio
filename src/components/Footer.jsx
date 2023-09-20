@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { MouseContext } from "../context/MouseContext";
-import { motion } from "framer-motion";
 import Wrapper from "./wrapper/wrapper";
 import { footer } from "../utilities/data";
 import Contact from "./Contact";
@@ -12,7 +11,7 @@ function Footer() {
   return (
     <section className="flex flex-col justify-center" id="Contact">
       <div className="z-20 mx-auto flex w-fit flex-col px-20 text-center dark:text-white max-md:px-0 max-md:pt-8 xl:mt-[5.5rem]">
-        <p
+        {/* <p
           className="cursor-pointer whitespace-nowrap text-lg opacity-40 2xl:text-xl"
           onClick={() => {
             window.location.href =
@@ -20,7 +19,7 @@ function Footer() {
           }}
         >
           Aleagrat5@gmail.com
-        </p>
+        </p> */}
         <h1 className="border-b-4 border-black text-[2rem] font-bold dark:border-white 2xl:text-[3rem]">
           Contacto
         </h1>
@@ -35,21 +34,18 @@ function Footer() {
             aria-label={item.arialabel}
             target="_blank"
             rel="noreferrer"
+            onMouseEnter={() => handleMouseEnter(item.index, "li")}
+            onMouseLeave={() => handleMouseLeave(item.index, "li")}
+            ref={(el) => (liRefs.current[item.index] = el)}
+            className="z-30"
           >
             <div className="flex items-center">
               {item.icon}
-              <h1
-                className="z-30 mx-4"
-                onMouseEnter={() => handleMouseEnter(item.index, "li")}
-                onMouseLeave={() => handleMouseLeave(item.index, "li")}
-                ref={(el) => (liRefs.current[item.index] = el)}
-              >
-                {item.text}
-              </h1>
+              <h1 className="mx-4">{item.text}</h1>
             </div>
           </a>
         ))}
-        <div className="z-30 flex w-full justify-center">
+        <div className="flex w-full justify-center">
           <h1 className="select-none">Hecho por Alejandro Agra.</h1>
         </div>
       </div>

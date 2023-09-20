@@ -13,17 +13,17 @@ function MouseContextProvider({ children }) {
 
   const handleMouseEnter = React.useCallback((index, type) => {
     if (type === "li") {
-      dropletRef.current.style.transition = "all 0.5s";
+      dropletRef.current.style.transition = "all 0.4s";
       dropletRef.current.style.transform = "scale(4)";
       dropletRef.current.style.backgroundColor = "#dfd3c3";
     } else if (type === "p") {
-      dropletRef.current.style.transition = "all 0.5s";
+      dropletRef.current.style.transition = "all 0.4s";
       dropletRef.current.style.transform = "scale(7)";
       dropletRef.current.classList.add("inverted");
     } else if (type === "div") {
       dropletRef.current.classList.add("transparent");
     } else if (type === "a") {
-      dropletRef.current.style.transition = "all 0.5s";
+      dropletRef.current.style.transition = "all 0.4s";
       dropletRef.current.style.transform = "scale(4)";
       dropletRef.current.style.backgroundColor = "#dfd3c3";
     }
@@ -34,7 +34,7 @@ function MouseContextProvider({ children }) {
     } else if (type === "div") {
       dropletRef.current.style.backgroundColor = "";
     }
-    dropletRef.current.style.transition = "all 0.5s";
+    dropletRef.current.style.transition = "all 0.4s";
     dropletRef.current.style.transform = "scale(1)";
     dropletRef.current.classList.remove("grande");
     dropletRef.current.classList.remove("transparent");

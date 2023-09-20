@@ -72,8 +72,7 @@ function Contact() {
         ></textarea>
         <button
           type="submit"
-          transition
-          className="flex h-[3rem] w-fit mx-auto px-16 mt-2 button items-center gap-2 dark:bg-white/10 whitespace-nowrap rounded-xl bg-transparent text-xl font-bold dark:text-white transition-all duration-500 hover:text-white dark:hover:text-black uppercase"
+          className="flex h-[3rem] w-fit mx-auto px-16 mt-2 button items-center gap-2 dark:bg-white/10 whitespace-nowrap rounded-xl bg-transparent text-xl font-bold dark:text-white transition-all duration-500 hover:text-white dark:hover:text-black uppercase transform hover:scale-105"
           onMouseEnter={() => handleMouseEnter(1, "div")}
           onMouseLeave={handleMouseLeave}
           ref={divRefs}

@@ -54,7 +54,7 @@ export function Home() {
             <a
               href="#Proyects"
               aria-label="Proyectos"
-              className="flex h-[4rem] px-10 button items-center gap-2 whitespace-nowrap rounded-3xl border-2 border-black bg-transparent dark:border-white text-xl font-bold dark:text-white transition-all duration-500 hover:text-white dark:hover:text-black uppercase "
+              className="flex py-5 px-10 button my-auto items-center gap-2 whitespace-nowrap rounded-3xl border-2 border-black bg-transparent dark:border-white text-xl font-bold dark:text-white transition-all duration-500 hover:text-white dark:hover:text-black uppercase "
               onMouseEnter={() => handleMouseEnter(2, "p")}
               onMouseLeave={() => handleMouseLeave(2, "p")}
             >
