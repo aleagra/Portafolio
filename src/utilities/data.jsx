@@ -57,12 +57,12 @@ export const skills = [
   { name: "Tailwind", imgSrc: "tailwind.svg" },
   { name: "Bootstrap", imgSrc: "bootstrap.svg" },
   { name: "SASS", imgSrc: "sass.svg" },
-  { name: "JavaScript", imgSrc: "javascript.svg" },
-  { name: "MySQL", imgSrc: "mysql.svg" },
-  { name: "Mongo DB", imgSrc: "mongo.svg" },
-  { name: "Tailwind", imgSrc: "tailwind.svg" },
-  { name: "Bootstrap", imgSrc: "bootstrap.svg" },
-  { name: "SASS", imgSrc: "sass.svg" },
+  { name: "Firebase", imgSrc: "javascript.svg" },
+  { name: "Postman", imgSrc: "mysql.svg" },
+  { name: "TypeScript", imgSrc: "mongo.svg" },
+  { name: "git", imgSrc: "tailwind.svg" },
+  { name: "GitHub", imgSrc: "bootstrap.svg" },
+  { name: "PHP", imgSrc: "sass.svg" },
 ];
 
 export const links = [

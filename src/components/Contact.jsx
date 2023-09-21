@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { MouseContext } from "../context/MouseContext";
+import emailjs from "emailjs-com";
 
 function Contact() {
   const [message, setMessage] = useState(null);
@@ -27,7 +28,7 @@ function Contact() {
     <div className="z-10 mx-auto flex gap-10 max-sm:w-full max-sm:p-6">
       <form
         onSubmit={sendEmail}
-        className="mt-4 flex w-[850px] flex-col justify-center gap-y-6 max-lg:w-full"
+        className="flex w-[850px] flex-col justify-center gap-y-6 max-lg:w-full"
       >
         <p
           className={` mb-2 rounded-md bg-emerald-400 py-2 text-center text-white ${
@@ -49,11 +50,7 @@ function Contact() {
             onMouseLeave={handleMouseLeave}
             ref={divRefs}
             required
-            pattern={
-              index === 1
-                ? "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}"
-                : undefined
-            }
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
             title={
               index === 1 ? "Ingresa una dirección de correo válido" : undefined
             }
