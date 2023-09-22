@@ -1,8 +1,8 @@
 import React, { useEffect, useContext, useRef, memo, useState } from "react";
 import { MouseContext } from "../context/MouseContext";
-import { BarsIcon, HomeIcon, ThemeIcon } from "../utilities/icons";
 import { links } from "../utilities/data";
-
+import { BiSolidSun, BiSolidHome } from "react-icons/bi";
+import { MdNightlightRound } from "react-icons/md";
 export const Navbar = memo(() => {
   const [menu, setMenu] = useState(true);
   const { aRefs, liRefs, handleMouseEnter, handleMouseLeave, theme, setTheme } =
@@ -32,7 +32,7 @@ export const Navbar = memo(() => {
           onMouseLeave={() => handleMouseLeave(0)}
           ref={(a) => (aRefs.current[0] = a)}
         >
-          <HomeIcon />
+          <BiSolidHome size={23} className="dark:fill-white" />
         </a>
         <p
           className={`z-30 max-md:ml-5 md:hidden ${menu ? "" : "hidden"}`}
@@ -41,7 +41,11 @@ export const Navbar = memo(() => {
           ref={(a) => (aRefs.current[0] = a)}
           onClick={handelThemeSwitch}
         >
-          <ThemeIcon />
+          {theme === "dark" ? (
+            <BiSolidSun size={23} className="dark:fill-white" />
+          ) : (
+            <MdNightlightRound size={23} className="dark:fill-white" />
+          )}
         </p>
         <div
           className={`absolute flex w-full transition duration-500 dark:text-white md:static md:w-auto ${
@@ -74,7 +78,11 @@ export const Navbar = memo(() => {
           onMouseLeave={() => handleMouseLeave(0)}
           ref={aRef}
         >
-          <ThemeIcon />
+          {theme === "dark" ? (
+            <BiSolidSun size={23} className="dark:fill-white" />
+          ) : (
+            <MdNightlightRound size={23} className="dark:fill-white" />
+          )}
         </p>
         <p
           className="pointer-events-auto z-30 cursor-pointer justify-center max-md:mr-5 md:hidden md:items-center"
@@ -83,7 +91,7 @@ export const Navbar = memo(() => {
           onMouseLeave={() => handleMouseLeave(0)}
           ref={aRef}
         >
-          <BarsIcon menu={menu} />
+          <BiSolidHome size={23} className="dark:fill-white" />
         </p>
       </div>
     </div>

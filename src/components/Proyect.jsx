@@ -43,7 +43,7 @@ const Proyect = ({
               <ul className="flex flex-wrap gap-2 mt-10 justify-center">
                 {techStack?.map((tag, index) => (
                   <li
-                    className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white"
+                    className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/80"
                     style={{ backgroundColor: hoverColor }}
                     key={index}
                   >

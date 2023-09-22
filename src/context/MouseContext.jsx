@@ -18,7 +18,7 @@ function MouseContextProvider({ children }) {
       dropletRef.current.style.backgroundColor = "#dfd3c3";
     } else if (type === "p") {
       dropletRef.current.style.transition = "all 0.4s";
-      dropletRef.current.style.transform = "scale(7)";
+      dropletRef.current.style.transform = "scale(4)";
       dropletRef.current.classList.add("inverted");
     } else if (type === "div") {
       dropletRef.current.classList.add("transparent");

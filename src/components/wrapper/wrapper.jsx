@@ -15,11 +15,11 @@ const Wrapper = (Component, idName, title) =>
             id={idName}
             className="w-[1200px] flex justify-center items-center flex-col"
           >
-            <div className="w-fit grid-rows-[150px_1fr] justify-center z-20 m-auto mx-auto flex flex-col py-16 text-center dark:text-white max-md:p-0 max-md:py-10">
-              <div className="row-start-1 mt-10">
+            <div className="w-fit grid-rows-[150px_1fr] justify-center z-20 m-auto mx-auto flex flex-col py-14 text-center dark:text-white max-md:p-0 max-md:py-10">
+              <div className="row-start-1 mt-16">
                 <h1
-                  className="border-b-4 uppercase
-                  border-black text-[2rem] font-bold dark:border-white 2xl:text-[3rem] select-none"
+                  className=" uppercase
+                  border-black text-[2rem] font-bold dark:border-white 2xl:text-[2.5rem] select-none"
                   onMouseEnter={() => handleMouseEnter(2, "p")}
                   onMouseLeave={() => handleMouseLeave(2, "p")}
                   ref={pRefs}

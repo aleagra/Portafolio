@@ -3,7 +3,6 @@ export { default as Background } from './Background';
 export { default as Contact } from './Contact';
 export { default as Footer } from './Footer';
 export * from './Home';
-export { default as LinkIcon } from './LinkIcon';
 export * from './Navbar';
 export { default as Proyect } from './Proyect';
 export { default as Proyects } from './Proyects';

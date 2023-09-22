@@ -27,7 +27,7 @@ function Skills() {
       <div className="z-20 w-[850px] mx-auto grid grid-cols-4 grid-rows-4 justify-center gap-8">
         {skills.map(({ name, imgSrc }, index) => (
           <motion.li
-            className="bg-white button list-none dark:hover:text-black borderBlack rounded-xl px-5 py-3 pt-5 dark:bg-white/10 dark:text-white/80 "
+            className="bg-white button flex flex-col justify-between items-center list-none dark:hover:text-black borderBlack rounded-xl px-5 py-3 pt-5 dark:bg-white/10 dark:text-white/80 "
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"
@@ -40,8 +40,8 @@ function Skills() {
             onMouseLeave={handleMouseLeave}
             ref={divRefs}
           >
-            <img src={imgSrc} alt="" className="mx-auto w-[50px] h-[50px]" />
-            <h1 className="py-2 text-center dark:opacity-100 font-bold select-none">
+            <div className="w-fit mx-auto">{imgSrc}</div>
+            <h1 className="py-2 text-center dark:opacity-40 font-bold select-none">
               {name}
             </h1>
           </motion.li>

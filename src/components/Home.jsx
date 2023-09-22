@@ -43,7 +43,7 @@ export function Home() {
               Alejandro Agra
             </span>
             <span
-              className="text-[2rem] text-black/80 dark:text-white/80 font-semibold max-sm:text-lg"
+              className="text-[2rem] text-black/80 dark:text-[#dfd3c3] font-bold max-sm:text-lg"
               onMouseEnter={() => handleMouseEnter(2, "p")}
               onMouseLeave={() => handleMouseLeave(2, "p")}
             >
@@ -54,11 +54,29 @@ export function Home() {
             <a
               href="#Proyects"
               aria-label="Proyectos"
-              className="flex py-5 px-10 button my-auto items-center gap-2 whitespace-nowrap rounded-3xl border-2 border-black bg-transparent dark:border-white text-xl font-bold dark:text-white transition-all duration-500 hover:text-white dark:hover:text-black uppercase "
+              className="flex py-4 px-4 button my-auto items-center gap-2 whitespace-nowrap rounded-2xl border-2 border-black bg-transparent dark:border-white text- font-bold dark:text-white transition-all duration-500 hover:text-white dark:hover:text-black uppercase "
               onMouseEnter={() => handleMouseEnter(2, "p")}
               onMouseLeave={() => handleMouseLeave(2, "p")}
             >
               <span>Ver proyectos</span>
+            </a>
+            <a
+              href="#Proyects"
+              aria-label="Proyectos"
+              className="flex py-4 px-4 button my-auto items-center gap-2 whitespace-nowrap rounded-2xl border-2 border-black bg-transparent dark:border-white text- font-bold dark:text-white transition-all duration-500 hover:text-white dark:hover:text-black uppercase "
+              onMouseEnter={() => handleMouseEnter(2, "p")}
+              onMouseLeave={() => handleMouseLeave(2, "p")}
+            >
+              <span>Ver</span>
+            </a>
+            <a
+              href="#Proyects"
+              aria-label="Proyectos"
+              className="flex py-4 px-4 button my-auto items-center gap-2 whitespace-nowrap rounded-2xl border-2 border-black bg-transparent dark:border-white text- font-bold dark:text-white transition-all duration-500 hover:text-white dark:hover:text-black uppercase "
+              onMouseEnter={() => handleMouseEnter(2, "p")}
+              onMouseLeave={() => handleMouseLeave(2, "p")}
+            >
+              <span>Ver</span>
             </a>
           </div>
         </div>

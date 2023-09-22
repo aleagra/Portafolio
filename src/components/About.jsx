@@ -8,7 +8,7 @@ function About() {
   return (
     <div className="w-[850px] mx-auto text-center">
       <span
-        className="select-none text-[3rem]  mx-auto font-bold text-black dark:text-white max-2xl:text-[3.2rem] max-sm:text-[2rem]"
+        className="select-none text-[3rem]  mx-auto font-bold text-black dark:text-[#dfd3c3] max-2xl:text-[3.2rem] max-sm:text-[2rem]"
         onMouseEnter={() => handleMouseEnter(5, "p")}
         onMouseLeave={() => handleMouseLeave(5, "p")}
       >
