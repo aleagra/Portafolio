@@ -7,10 +7,7 @@ const Wrapper = (Component, idName, title) =>
 
     return (
       <>
-        <section
-          className="flex min-h-screen flex-col items-center"
-          id={idName}
-        >
+        <section className="flex flex-col items-center" id={idName}>
           <section
             id={idName}
             className="w-[1200px] flex justify-center items-center flex-col"

@@ -31,6 +31,7 @@ export const Navbar = memo(() => {
           onMouseEnter={() => handleMouseEnter(0, "a")}
           onMouseLeave={() => handleMouseLeave(0)}
           ref={(a) => (aRefs.current[0] = a)}
+          aria-label="home"
         >
           <BiSolidHome size={23} className="dark:fill-white" />
         </a>

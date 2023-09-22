@@ -43,11 +43,11 @@ body {
   background-color: transparent !important;
 }
 .button {
-  background-color: transparent;
   text-align: center;
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  color: white; /* Cambia el color de texto inicial */
 }
 
 .button::before {
@@ -58,16 +58,28 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  transition: height 0.5s ease, background-color 0.5s ease, color 0.5s ease;
+  transition: height 0.5s ease, background-color 0.5s ease;
   z-index: -1;
 }
 
 .button:hover {
   background-color: transparent;
+  color: #0077b5; /* Cambia el color de texto al hacer hover */
 }
 
 .button:hover::before {
   height: 100%;
   background-color: white;
-  color: white;
+}
+
+.icon-container {
+  display: inline-block;
+}
+
+.icon.fill-white {
+  fill: white;
+}
+
+.button:hover .icon.fill-white {
+  fill: black;
 }

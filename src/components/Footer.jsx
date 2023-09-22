@@ -11,7 +11,7 @@ function Footer() {
   return (
     <>
       <Contact />
-      <div className="flex w-full flex-wrap items-end justify-center gap-8 py-6 dark:text-white 2xl:pt-20">
+      <div className="flex w-full flex-wrap items-end justify-center gap-8 py-6 dark:text-white ">
         {footer.map((item) => (
           <a
             key={item.index}
