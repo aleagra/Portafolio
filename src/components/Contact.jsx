@@ -28,8 +28,15 @@ function Contact() {
     <div className="z-10 mx-auto flex gap-10 max-sm:w-full max-sm:p-6">
       <form
         onSubmit={sendEmail}
-        className="flex w-[850px] flex-col justify-center gap-y-6 max-lg:w-full"
+        className="flex w-[850px] flex-col justify-center gap-y-5  max-lg:w-full"
       >
+        <p
+          className={` mb-2 rounded-md bg-emerald-400 py-1 text-center text-white ${
+            message ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          {message}
+        </p>
         {["Nombre", "Email"].map((placeholder, index) => (
           <input
             key={index}
@@ -68,13 +75,6 @@ function Contact() {
         >
           Enviar
         </button>
-        <p
-          className={` mb-2 rounded-md bg-emerald-400 py-2 text-center text-white ${
-            message ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          {message}
-        </p>
       </form>
     </div>
   );
