@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { MouseContext } from "../context/MouseContext";
 import emailjs from "emailjs-com";
 
@@ -49,7 +49,6 @@ function Contact() {
             onMouseLeave={() => handleMouseLeave && handleMouseLeave (1, "div")}
             ref={(el) => (assignRef(divRefs,1,el))}
             required
-            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
             title={
               index === 1 ? "Ingresa una dirección de correo válido" : undefined
             }

@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { MouseContext } from "../context/MouseContext";
 import { motion } from "framer-motion";
 import { skills } from "../utilities/data";
-import Wrapper from "./wrapper/wrapper";
+import Wrapper from "./wrapper";
 
 function Skills() {
   const { divRefs, handleMouseEnter, handleMouseLeave } =

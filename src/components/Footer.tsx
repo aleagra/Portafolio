@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { MouseContext } from "../context/MouseContext";
-import Wrapper from "./wrapper/wrapper";
+import Wrapper from "./wrapper";
 import { footer } from "../utilities/data";
 import Contact from "./Contact";
 

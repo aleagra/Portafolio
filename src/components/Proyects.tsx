@@ -1,7 +1,7 @@
 import React from "react";
 import Proyect from "./Proyect";
 import { proyectsData } from "../utilities/data";
-import Wrapper from "./wrapper/wrapper";
+import Wrapper from "./wrapper";
 
 function Proyects() {
   return (

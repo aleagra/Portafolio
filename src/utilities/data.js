@@ -111,3 +111,4 @@ export const footer = [
     arialabel: "Mail",
   },
 ];
+

@@ -9,4 +9,4 @@ export { default as Proyects } from './Proyects';
 export { default as Skills } from './Skills';
 export * from './firebase';
 export * from './mouse';
-export { default as wrapper } from './wrapper/wrapper';
+export { default as wrapper } from './wrapper';

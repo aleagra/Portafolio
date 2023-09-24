@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from "react";
-import { MouseContext } from "../../context/MouseContext";
+import { MouseContext } from "../context/MouseContext";
 import { IWrapper } from "types/interface";
 
 const Wrapper = ({ Component, idName, title }: IWrapper) => {
