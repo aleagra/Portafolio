@@ -20,4 +20,7 @@ function About() {
     </div>
   );
 }
-export default Wrapper(About, "About", "Sobre mi");
+
+export default () => (
+  <Wrapper Component={About} idName="About" title="Sobre mi" />
+);

@@ -42,5 +42,7 @@ function Footer() {
     </>
   );
 }
+export default () => (
+  <Wrapper Component={Footer} idName="Contact" title="Contacto" />
+);
 
-export default Wrapper(Footer, "Contact", "Contacto");

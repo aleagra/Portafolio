@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { MouseContext } from "../context/MouseContext";
 import { motion } from "framer-motion";
-import Wrapper from "./wrapper/wrapper";
 import { skills } from "../utilities/data";
+import Wrapper from "./wrapper/wrapper";
 
 function Skills() {
   const { divRefs, handleMouseEnter, handleMouseLeave } =
@@ -21,7 +21,11 @@ function Skills() {
       },
     }),
   };
-
+  function assignRef(ref: any, index: number, value: any) {
+    if (ref && ref.current) {
+      ref.current[index] = value
+    }
+  }
   return (
     <>
       <div className="z-20 w-[850px] mx-auto grid grid-cols-4 grid-rows-4 justify-center gap-8">
@@ -38,7 +42,7 @@ function Skills() {
             custom={index}
             onMouseEnter={() => handleMouseEnter && handleMouseEnter(index, "div")}
             onMouseLeave={() => handleMouseLeave && handleMouseLeave(index, "div")}
-            ref={divRefs[index]} 
+            ref={(el) => (assignRef(divRefs,1,el))}
           >
             <div className="w-fit mx-auto">{imgSrc}</div>
             <h1 className="py-2 text-center dark:opacity-40 font-bold select-none">
@@ -50,4 +54,6 @@ function Skills() {
     </>
   );
 }
-export default Wrapper(Skills, "Skills", "Habilidades");
+export default () => (
+  <Wrapper Component={Skills} idName="Skills" title="Habilidades" />
+);

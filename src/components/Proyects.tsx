@@ -20,4 +20,8 @@ function Proyects() {
     </div>
   );
 }
-export default Wrapper(Proyects, "Proyects", "Mis proyectos");
+
+export default () => (
+  <Wrapper Component={Proyects} idName="Proyects" title="Mis proyectos" />
+);
+

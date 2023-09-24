@@ -20,8 +20,8 @@ export interface ICards {
 	resume:string;
 	liveDemoLink:string;
   }
-  export interface IWrapper{
-	Component:string;
-	idName:string;
-	title:string;
+  export interface IWrapper {
+	Component: React.ComponentType; 
+	idName: string;
+	title: string;
   }

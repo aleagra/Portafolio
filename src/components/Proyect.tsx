@@ -12,13 +12,20 @@ const Proyect = ({
 }:ICards) => {
   const { divRefs, handleMouseEnter, handleMouseLeave } =
     useContext(MouseContext) || {};
-  const ref = useRef(null);
+    const ref = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "1.33 1"],
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  function assignRef(ref: any, index: number, value: any) {
+		if (ref && ref.current) {
+			ref.current[index] = value
+		}
+	}
+
+  
   return (
     <>
       <motion.div
@@ -34,7 +41,7 @@ const Proyect = ({
           target="_blank"
           onMouseEnter={() => handleMouseEnter && handleMouseEnter(1, "div")}
           onMouseLeave={() => handleMouseLeave && handleMouseLeave(1, "div")}
-          ref={divRefs}
+          ref={(el) => (assignRef(divRefs,1,el))}
         >
           <section className="bg-gray-100 rounded-lg overflow-hidden  relative sm:h-[22rem] hover:bg-gray-200 transition  dark:text-white dark:bg-white/10 dark:hover:bg-white/20 button hover:scale-105 duration-500 dark:hover:text-black">
             <div className="pt-4 pb-7 px-5 sm:pl-10 sm:group-even:pl-10 sm:pr-8 justify-center sm:pt-10 mr-[30rem] flex flex-col h-full sm:group-even:ml-[30rem] group-even:mr-0">

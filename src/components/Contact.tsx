@@ -24,6 +24,13 @@ function Contact() {
           }, 2000);
         });
     }
+    function assignRef(ref: any, index: number, value: any) {
+      if (ref && ref.current) {
+        ref.current[index] = value
+      }
+    }
+  
+
   return (
     <div className="z-10 mx-auto flex gap-10 max-sm:w-full max-sm:p-6">
       <form
@@ -40,7 +47,7 @@ function Contact() {
             name={index === 0 ? "name" : "email"}
             onMouseEnter={() => handleMouseEnter && handleMouseEnter (1, "div")}
             onMouseLeave={() => handleMouseLeave && handleMouseLeave (1, "div")}
-            ref={divRefs}
+            ref={(el) => (assignRef(divRefs,1,el))}
             required
             pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
             title={
@@ -56,7 +63,7 @@ function Contact() {
           placeholder="Descripción"
           onMouseEnter={() => handleMouseEnter && handleMouseEnter(1, "div")}
           onMouseLeave={() => handleMouseLeave && handleMouseLeave (1, "div")}
-          ref={divRefs}
+          ref={(el) => (assignRef(divRefs,1,el))}
           required
         ></textarea>
         <button
@@ -64,7 +71,7 @@ function Contact() {
           className="flex h-[3rem] w-fit mx-auto px-16 mt-2 button items-center gap-2 dark:bg-white/10 whitespace-nowrap rounded-xl bg-transparent text-xl font-bold dark:text-white transition-all duration-500 hover:text-white dark:hover:text-black uppercase transform hover:scale-105"
           onMouseEnter={() => handleMouseEnter && handleMouseEnter(1, "div")}
           onMouseLeave={() => handleMouseLeave && handleMouseLeave (1, "div")}
-          ref={divRefs}
+          ref={(el) => (assignRef(divRefs,1,el))}
         >
           Enviar
         </button>

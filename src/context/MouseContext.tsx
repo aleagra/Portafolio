@@ -8,7 +8,7 @@ function MouseContextProvider({ children }: { children: ReactNode }) {
 	const liRefs = useRef([])
 	const pRefs = useRef([])
 	const aRefs = useRef([])
-	const divRefs = useRef([])
+	const divRefs = useRef<HTMLDivElement[]>([]);
 	const dropletRef: RefObject<HTMLDivElement | null> = useRef(null)
 	const sizeRef = useRef({ width: '20px', height: '20px' })
 
