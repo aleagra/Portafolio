@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import { useContext,useRef } from "react";
 import { MouseContext } from "../../context/MouseContext";
-const Wrapper = (Component, idName, title) =>
+import { IWrapper } from "types/interface";
+const Wrapper = ({Component, idName, title}:IWrapper) =>
   function HOC() {
     const { pRefs, handleMouseEnter, handleMouseLeave } =
-      useContext(MouseContext);
-
+      useContext(MouseContext) || {};
+      const h1Ref = useRef<HTMLHeadingElement>(null);
     return (
       <>
         <section
@@ -20,9 +21,9 @@ const Wrapper = (Component, idName, title) =>
                 <h1
                   className=" uppercase
                   border-black text-[2rem] font-bold dark:border-white 2xl:text-[2.5rem] select-none"
-                  onMouseEnter={() => handleMouseEnter(2, "p")}
-                  onMouseLeave={() => handleMouseLeave(2, "p")}
-                  ref={pRefs}
+                  onMouseEnter={() => handleMouseEnter && handleMouseEnter(2, "p")}
+                  onMouseLeave={() => handleMouseLeave && handleMouseLeave(2, "p")}
+                  ref={h1Ref}
                 >
                   {title}
                 </h1>

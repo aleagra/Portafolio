@@ -12,3 +12,16 @@ export interface IMouseContextValue {
 	handleMouseEnter: (index: number, type: string) => void
 	handleMouseLeave: (index: number, type: string) => void
 }
+
+export interface ICards {
+	title: string;
+	imageSrc: string;
+	techStack: string[]
+	resume:string;
+	liveDemoLink:string;
+  }
+  export interface IWrapper{
+	Component:string;
+	idName:string;
+	title:string;
+  }

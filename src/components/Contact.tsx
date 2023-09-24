@@ -3,27 +3,27 @@ import { MouseContext } from "../context/MouseContext";
 import emailjs from "emailjs-com";
 
 function Contact() {
-  const [message, setMessage] = useState(null);
+  const [message, setMessage] = useState("");
   const { divRefs, handleMouseEnter, handleMouseLeave } =
-    useContext(MouseContext);
+    useContext(MouseContext) || {};
 
-  function sendEmail(e) {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_ccbjvsj",
-        "template_qehuqna",
-        e.target,
-        "4pYds05KBhAOwyuvQ"
-      )
-      .then(() => {
-        setMessage("El mensaje se envió correctamente.");
-        setTimeout(() => {
-          setMessage(null);
-        }, 2000);
-      });
-  }
+    function sendEmail(e: React.FormEvent<HTMLFormElement>) {
+      e.preventDefault();
+    
+      emailjs
+        .sendForm(
+          "service_ccbjvsj",
+          "template_qehuqna",
+          e.target as HTMLFormElement,
+          "4pYds05KBhAOwyuvQ"
+        )
+        .then(() => {
+          setMessage('El mensaje se envió correctamente.');
+          setTimeout(() => {
+            setMessage("");
+          }, 2000);
+        });
+    }
   return (
     <div className="z-10 mx-auto flex gap-10 max-sm:w-full max-sm:p-6">
       <form
@@ -38,8 +38,8 @@ function Contact() {
             className="rounded-xl text-xl p-3 px-6 py-3 shadow-lg outline-none focus:bg-[#282828] focus:text-white dark:bg-white/10 dark:text-white dark:focus:bg-white/30 dark:focus:text-black"
             placeholder={placeholder}
             name={index === 0 ? "name" : "email"}
-            onMouseEnter={() => handleMouseEnter(1, "div")}
-            onMouseLeave={handleMouseLeave}
+            onMouseEnter={() => handleMouseEnter && handleMouseEnter (1, "div")}
+            onMouseLeave={() => handleMouseLeave && handleMouseLeave (1, "div")}
             ref={divRefs}
             required
             pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
@@ -54,16 +54,16 @@ function Contact() {
           name="message"
           id="message"
           placeholder="Descripción"
-          onMouseEnter={() => handleMouseEnter(1, "div")}
-          onMouseLeave={handleMouseLeave}
+          onMouseEnter={() => handleMouseEnter && handleMouseEnter(1, "div")}
+          onMouseLeave={() => handleMouseLeave && handleMouseLeave (1, "div")}
           ref={divRefs}
           required
         ></textarea>
         <button
           type="submit"
           className="flex h-[3rem] w-fit mx-auto px-16 mt-2 button items-center gap-2 dark:bg-white/10 whitespace-nowrap rounded-xl bg-transparent text-xl font-bold dark:text-white transition-all duration-500 hover:text-white dark:hover:text-black uppercase transform hover:scale-105"
-          onMouseEnter={() => handleMouseEnter(1, "div")}
-          onMouseLeave={handleMouseLeave}
+          onMouseEnter={() => handleMouseEnter && handleMouseEnter(1, "div")}
+          onMouseLeave={() => handleMouseLeave && handleMouseLeave (1, "div")}
           ref={divRefs}
         >
           Enviar

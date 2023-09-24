@@ -10,11 +10,9 @@ function Proyects() {
         <React.Fragment key={index}>
           <Proyect
             title={project.title}
-            description={project.description}
             imageSrc={project.imageSrc}
             techStack={project.techStack}
-            resume={project.resume}
-            hoverColor={project.hoverColor}
+            resume={project.resume} 
             liveDemoLink={project.liveDemoLink}
           />
         </React.Fragment>

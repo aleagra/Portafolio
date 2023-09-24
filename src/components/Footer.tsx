@@ -6,8 +6,13 @@ import Contact from "./Contact";
 
 function Footer() {
   const { liRefs, handleMouseEnter, handleMouseLeave } =
-    useContext(MouseContext);
+    useContext(MouseContext) || {};
 
+    function assignRef(ref: any, index: number, value: any) {
+      if (ref && ref.current) {
+        ref.current[index] = value
+      }
+    }
   return (
     <>
       <Contact />
@@ -19,9 +24,9 @@ function Footer() {
             aria-label={item.arialabel}
             target="_blank"
             rel="noreferrer"
-            onMouseEnter={() => handleMouseEnter(item.index, "li")}
-            onMouseLeave={() => handleMouseLeave(item.index, "li")}
-            ref={(el) => (liRefs.current[item.index] = el)}
+            onMouseEnter={() => handleMouseEnter && handleMouseEnter(item.index, "li")}
+            onMouseLeave={() => handleMouseLeave && handleMouseLeave(item.index, "li")}
+            ref={(el) => (assignRef(liRefs,item.index,el))}
             className="z-30"
           >
             <div className="flex items-center">

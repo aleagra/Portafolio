@@ -1,17 +1,17 @@
 import { useContext, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { MouseContext } from "../context/MouseContext";
+import { ICards } from "types/interface";
 
 const Proyect = ({
   title,
   imageSrc,
   techStack,
   resume,
-  hoverColor,
   liveDemoLink,
-}) => {
+}:ICards) => {
   const { divRefs, handleMouseEnter, handleMouseLeave } =
-    useContext(MouseContext);
+    useContext(MouseContext) || {};
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -32,8 +32,8 @@ const Proyect = ({
         <a
           href={liveDemoLink}
           target="_blank"
-          onMouseEnter={() => handleMouseEnter(1, "div")}
-          onMouseLeave={handleMouseLeave}
+          onMouseEnter={() => handleMouseEnter && handleMouseEnter(1, "div")}
+          onMouseLeave={() => handleMouseLeave && handleMouseLeave(1, "div")}
           ref={divRefs}
         >
           <section className="bg-gray-100 rounded-lg overflow-hidden  relative sm:h-[22rem] hover:bg-gray-200 transition  dark:text-white dark:bg-white/10 dark:hover:bg-white/20 button hover:scale-105 duration-500 dark:hover:text-black">
@@ -41,10 +41,10 @@ const Proyect = ({
               <h3 className="text-2xl font-bold">{title}</h3>
               <p className="mt-6 leading-relaxed font-extralight">{resume}</p>
               <ul className="flex flex-wrap gap-2 mt-10 justify-center">
-                {techStack?.map((tag, index) => (
+                {techStack?.map((tag:string, index:number) => (
                   <li
                     className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/80"
-                    style={{ backgroundColor: hoverColor }}
+            
                     key={index}
                   >
                     {tag}
@@ -55,8 +55,7 @@ const Proyect = ({
 
             <img
               src={imageSrc}
-              alt="Project I worked on"
-              quality={95}
+              alt="Project I worked on" 
               className="absolute hidden sm:block top-0 -right-0 w-[30rem] transition group-even:right-[initial] group-even:-left-0"
             />
           </section>

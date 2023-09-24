@@ -6,14 +6,14 @@ import { skills } from "../utilities/data";
 
 function Skills() {
   const { divRefs, handleMouseEnter, handleMouseLeave } =
-    useContext(MouseContext);
+    useContext(MouseContext) || {};
 
   const fadeInAnimationVariants = {
     initial: {
       opacity: 0,
       y: 100,
     },
-    animate: (index) => ({
+    animate: (index:number) => ({
       opacity: 1,
       y: 0,
       transition: {
@@ -36,9 +36,9 @@ function Skills() {
               once: true,
             }}
             custom={index}
-            onMouseEnter={() => handleMouseEnter(index, "div")}
-            onMouseLeave={handleMouseLeave}
-            ref={divRefs}
+            onMouseEnter={() => handleMouseEnter && handleMouseEnter(index, "div")}
+            onMouseLeave={() => handleMouseLeave && handleMouseLeave(index, "div")}
+            ref={divRefs[index]} 
           >
             <div className="w-fit mx-auto">{imgSrc}</div>
             <h1 className="py-2 text-center dark:opacity-40 font-bold select-none">
