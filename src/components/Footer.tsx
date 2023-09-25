@@ -4,7 +4,7 @@ import Wrapper from "./wrapper";
 import { footer } from "../utilities/data";
 import Contact from "./Contact";
 
-function Footer() {
+const Footer: React.FC = () => {
   const { liRefs, handleMouseEnter, handleMouseLeave } =
     useContext(MouseContext) || {};
 
@@ -24,8 +24,8 @@ function Footer() {
             aria-label={item.arialabel}
             target="_blank"
             rel="noreferrer"
-            onMouseEnter={() => handleMouseEnter && handleMouseEnter(item.index, "li")}
-            onMouseLeave={() => handleMouseLeave && handleMouseLeave(item.index, "li")}
+            onMouseEnter={() => handleMouseEnter?.(item.index, "li")}
+            onMouseLeave={() => handleMouseLeave?.(item.index, "li")}
             ref={(el) => (assignRef(liRefs,item.index,el))}
             className="z-30"
           >

@@ -3,7 +3,8 @@ import Proyect from "./Proyect";
 import { proyectsData } from "../utilities/data";
 import Wrapper from "./wrapper";
 
-function Proyects() {
+
+const Proyects: React.FC = () => {
   return (
     <div className="w-[850px]">
       {proyectsData.map((project, index) => (

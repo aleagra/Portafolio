@@ -1,7 +1,7 @@
 import MouseContextProvider from './context/MouseContext'
 import { About, Background, Footer, Home, Mouse, Navbar, Proyects, Skills } from './components'
-export function App() {
 
+export const App: React.FC = () => {
 	return (
 		<MouseContextProvider>
 			<Background />

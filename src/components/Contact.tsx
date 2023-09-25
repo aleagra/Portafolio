@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { MouseContext } from "../context/MouseContext";
 import emailjs from "emailjs-com";
 
-function Contact() {
+const Contact: React.FC = () => {
   const [message, setMessage] = useState("");
   const { divRefs, handleMouseEnter, handleMouseLeave } =
     useContext(MouseContext) || {};
@@ -45,8 +45,8 @@ function Contact() {
             className="rounded-xl text-xl p-3 px-6 py-3 shadow-lg outline-none focus:bg-[#282828] focus:text-white dark:bg-white/10 dark:text-white dark:focus:bg-white/30 dark:focus:text-black"
             placeholder={placeholder}
             name={index === 0 ? "name" : "email"}
-            onMouseEnter={() => handleMouseEnter && handleMouseEnter (1, "div")}
-            onMouseLeave={() => handleMouseLeave && handleMouseLeave (1, "div")}
+            onMouseEnter={() => handleMouseEnter?.(1, "div")}
+            onMouseLeave={() => handleMouseLeave?. (1, "div")}
             ref={(el) => (assignRef(divRefs,1,el))}
             required
             title={
@@ -60,16 +60,16 @@ function Contact() {
           name="message"
           id="message"
           placeholder="Descripción"
-          onMouseEnter={() => handleMouseEnter && handleMouseEnter(1, "div")}
-          onMouseLeave={() => handleMouseLeave && handleMouseLeave (1, "div")}
+          onMouseEnter={() => handleMouseEnter?.(1, "div")}
+          onMouseLeave={() => handleMouseLeave?.(1, "div")}
           ref={(el) => (assignRef(divRefs,1,el))}
           required
         ></textarea>
         <button
           type="submit"
           className="flex h-[3rem] w-fit mx-auto px-16 mt-2 button items-center gap-2 dark:bg-white/10 whitespace-nowrap rounded-xl bg-transparent text-xl font-bold dark:text-white transition-all duration-500 hover:text-white dark:hover:text-black uppercase transform hover:scale-105"
-          onMouseEnter={() => handleMouseEnter && handleMouseEnter(1, "div")}
-          onMouseLeave={() => handleMouseLeave && handleMouseLeave (1, "div")}
+          onMouseEnter={() => handleMouseEnter?.(1, "div")}
+          onMouseLeave={() => handleMouseLeave?.(1, "div")}
           ref={(el) => (assignRef(divRefs,1,el))}
         >
           Enviar

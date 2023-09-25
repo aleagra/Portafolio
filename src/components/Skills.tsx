@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import { skills } from "../utilities/data";
 import Wrapper from "./wrapper";
 
-function Skills() {
+
+const Skills: React.FC = () => {
   const { divRefs, handleMouseEnter, handleMouseLeave } =
     useContext(MouseContext) || {};
 
@@ -40,8 +41,8 @@ function Skills() {
               once: true,
             }}
             custom={index}
-            onMouseEnter={() => handleMouseEnter && handleMouseEnter(index, "div")}
-            onMouseLeave={() => handleMouseLeave && handleMouseLeave(index, "div")}
+            onMouseEnter={() => handleMouseEnter?.(index, "div")}
+            onMouseLeave={() => handleMouseLeave?.(index, "div")}
             ref={(el) => (assignRef(divRefs,1,el))}
           >
             <div className="w-fit mx-auto">{imgSrc}</div>

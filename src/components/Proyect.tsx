@@ -3,13 +3,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { MouseContext } from "../context/MouseContext";
 import { ICards } from "types/interface";
 
-const Proyect = ({
-  title,
-  imageSrc,
-  techStack,
-  resume,
-  liveDemoLink,
-}:ICards) => {
+
+const Proyect: React.FC<ICards> = ({title,imageSrc,techStack,resume,liveDemoLink}) => {
+
   const { divRefs, handleMouseEnter, handleMouseLeave } =
     useContext(MouseContext) || {};
     const ref = useRef<HTMLDivElement | null>(null);
@@ -39,8 +35,8 @@ const Proyect = ({
         <a
           href={liveDemoLink}
           target="_blank"
-          onMouseEnter={() => handleMouseEnter && handleMouseEnter(1, "div")}
-          onMouseLeave={() => handleMouseLeave && handleMouseLeave(1, "div")}
+          onMouseEnter={() => handleMouseEnter?.(1, "div")}
+          onMouseLeave={() => handleMouseLeave?.(1, "div")}
           ref={(el) => (assignRef(divRefs,1,el))}
         >
           <section className="bg-gray-100 rounded-lg overflow-hidden  relative sm:h-[22rem] hover:bg-gray-200 transition  dark:text-white dark:bg-white/10 dark:hover:bg-white/20 button hover:scale-105 duration-500 dark:hover:text-black">

@@ -5,7 +5,7 @@ import { IMouseContextValue } from "types/interface";
 
 interface MouseProps {}
 
-export function Mouse(props: MouseProps) {
+const Mouse: React.FC<MouseProps> = () => {
   const contextValue: IMouseContextValue | null = useContext(MouseContext);
 
   if (!contextValue) {
@@ -69,3 +69,4 @@ export function Mouse(props: MouseProps) {
     />
   );
 }
+export default Mouse;

@@ -3,7 +3,8 @@ import lottie from "lottie-web";
 import { MouseContext } from "../context/MouseContext";
 import animationData from "../assets/lottie.json";
 
-export function Home() {
+
+const Home: React.FC = () => {
   const { handleMouseEnter, handleMouseLeave } = useContext(MouseContext) || {};
   const animationContainer = useRef<HTMLDivElement | null>(null);
 
@@ -39,15 +40,15 @@ export function Home() {
           <div className="z-20 w-fit flex flex-col justify-center items-center max-2xl:px-10 max-2xl:mx-auto max-md:px-0">
             <span
               className="m-0 p-0 mb-2 text-[6rem] font-bold leading-[7rem] text-black dark:text-white max-2xl:text-[5rem] max-lg:text-[4rem] max-sm:text-[2rem] max-sm:leading-[5rem]"
-              onMouseEnter={() => handleMouseEnter && handleMouseEnter(1, "p")}
-              onMouseLeave={() => handleMouseLeave && handleMouseLeave(1, "p")}
+              onMouseEnter={() => handleMouseEnter?.(1, "p")}
+              onMouseLeave={() => handleMouseLeave?.(1, "p")}
             >
               Alejandro Agra
             </span>
             <span
               className="text-[2rem] text-black/80 dark:text-[#dfd3c3] font-bold max-sm:text-lg"
-              onMouseEnter={() => handleMouseEnter && handleMouseEnter(2, "p")}
-              onMouseLeave={() => handleMouseLeave && handleMouseLeave(2, "p")}
+              onMouseEnter={() => handleMouseEnter?.(2, "p")}
+              onMouseLeave={() => handleMouseLeave?.(2, "p")}
             >
               Full Stack Developer
             </span>
@@ -57,8 +58,8 @@ export function Home() {
               href="#Proyects"
               aria-label="Proyectos"
               className="flex py-4 px-4 button my-auto items-center gap-2 whitespace-nowrap rounded-2xl border-2 border-black bg-transparent dark:border-white text- font-bold dark:text-white transition-all duration-500 hover:text-white dark:hover:text-black uppercase "
-              onMouseEnter={() => handleMouseEnter && handleMouseEnter(2, "p")}
-              onMouseLeave={() => handleMouseLeave && handleMouseLeave(2, "p")}
+              onMouseEnter={() => handleMouseEnter?.(2, "p")}
+              onMouseLeave={() => handleMouseLeave?.(2, "p")}
             >
               <span>Ver proyectos</span>
             </a>
@@ -66,8 +67,8 @@ export function Home() {
               href="#Proyects"
               aria-label="Proyectos"
               className="flex py-4 px-4 button my-auto items-center gap-2 whitespace-nowrap rounded-2xl border-2 border-black bg-transparent dark:border-white text- font-bold dark:text-white transition-all duration-500 hover:text-white dark:hover:text-black uppercase "
-              onMouseEnter={() => handleMouseEnter && handleMouseEnter(2, "p")}
-              onMouseLeave={() => handleMouseLeave && handleMouseLeave(2, "p")}
+              onMouseEnter={() => handleMouseEnter?.(2, "p")}
+              onMouseLeave={() => handleMouseLeave?.(2, "p")}
             >
               <span>Ver</span>
             </a>
@@ -75,8 +76,8 @@ export function Home() {
               href="#Proyects"
               aria-label="Proyectos"
               className="flex py-4 px-4 button my-auto items-center gap-2 whitespace-nowrap rounded-2xl border-2 border-black bg-transparent dark:border-white text- font-bold dark:text-white transition-all duration-500 hover:text-white dark:hover:text-black uppercase "
-              onMouseEnter={() => handleMouseEnter && handleMouseEnter(2, "p")}
-              onMouseLeave={() => handleMouseLeave && handleMouseLeave(2, "p")}
+              onMouseEnter={() => handleMouseEnter?.(2, "p")}
+              onMouseLeave={() => handleMouseLeave?.(2, "p")}
             >
               <span>Ver</span>
             </a>
@@ -86,3 +87,4 @@ export function Home() {
     </section>
   );
 }
+export default Home;
