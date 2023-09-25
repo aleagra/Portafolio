@@ -9,7 +9,7 @@ module.exports = {
       },
       fontFamily: {
         jakarta: ['jakarta', 'sans'],
-      },
+      }, 
       colors: {
       
       },

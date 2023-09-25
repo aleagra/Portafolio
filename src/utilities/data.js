@@ -6,7 +6,7 @@ import { GrMysql } from "react-icons/gr";
 
 export const proyectsData = [
   {
-    imageSrc: "./Eztranslate.png",
+    imageSrc: "./Eztranslate.webp",
     title: "Eztranslate",
     description: "Traductor",
     techStack: ["React", "Tailwind", "Netlify"],
@@ -17,7 +17,7 @@ export const proyectsData = [
    
   },
   {
-    imageSrc: "./CryptoWave.png",
+    imageSrc: "./CryptoWave.webp",
     title: "Cryptowave",
     description: "Crypto Wallet",
     techStack: ["React", "Tailwind", "Firebase"],
@@ -28,7 +28,7 @@ export const proyectsData = [
 
   },
   {
-    imageSrc: "./Weatherme.png",
+    imageSrc: "./Weatherme.webp",
     title: "WeatherMe",
     description: "Pagina del clima",
     techStack: ["React", "Tailwind", "Firebase"],
@@ -39,7 +39,7 @@ export const proyectsData = [
   
   },
   {
-    imageSrc: "./socialApp.png",
+    imageSrc: "./socialApp.webp",
     title: "Social App",
     description: "Red social",
     techStack: ["React", "Node Js", "Tailwind", "MongoDB", "Firebase"],
@@ -52,21 +52,21 @@ export const proyectsData = [
 ];
 export const skills = [
   { name: "React.js", imgSrc: React.createElement(DiReact,{size:46}) },
-  { name: "HTML", imgSrc: React.createElement(DiHtml5,{size:46}) },
-  { name: "CSS", imgSrc: React.createElement(DiCss3,{size:46}) },
   { name: "Node.js", imgSrc: React.createElement(DiNodejsSmall,{size:46}) },
   { name: "JavaScript", imgSrc: React.createElement(DiJavascript1,{size:46}) },
+  { name: "TypeScript", imgSrc: React.createElement(BiLogoTypescript,{size:46}) },
   { name: "MySQL", imgSrc: React.createElement(GrMysql,{size:46}) },
   { name: "Mongo DB", imgSrc: React.createElement(DiMongodb,{size:46}) },
-  { name: "TailwindCss", imgSrc: React.createElement(BiLogoTailwindCss,{size:46}) },
-  { name: "Bootstrap", imgSrc: React.createElement(DiBootstrap,{size:46}) },
-  { name: "SASS", imgSrc: React.createElement(DiSass,{size:46}) },
-  { name: "Firebase", imgSrc: React.createElement(BiLogoFirebase,{size:46}) },
-  { name: "Postman", imgSrc: React.createElement(SiPostman,{size:44}) },
-  { name: "TypeScript", imgSrc: React.createElement(BiLogoTypescript,{size:46}) },
-  { name: "Git",  imgSrc: React.createElement(DiGit,{size:52}) },
-  { name: "GitHub", imgSrc: React.createElement(BiLogoGithub,{size:46}) },
   { name: "PHP", imgSrc: React.createElement(SiPhp,{size:46}) },
+  { name: "Postman", imgSrc: React.createElement(SiPostman,{size:44}) },
+  { name: "HTML", imgSrc: React.createElement(DiHtml5,{size:46}) },
+  { name: "CSS", imgSrc: React.createElement(DiCss3,{size:46}) },
+  { name: "TailwindCss", imgSrc: React.createElement(BiLogoTailwindCss,{size:46}) },
+  { name: "SASS", imgSrc: React.createElement(DiSass,{size:46}) },
+  { name: "Bootstrap", imgSrc: React.createElement(DiBootstrap,{size:46}) },
+  { name: "Firebase", imgSrc: React.createElement(BiLogoFirebase,{size:46}) },
+  { name: "GitHub", imgSrc: React.createElement(BiLogoGithub,{size:46}) },
+  { name: "Git",  imgSrc: React.createElement(DiGit,{size:52}) },
 ];
 
 export const links = [
