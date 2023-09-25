@@ -19,9 +19,10 @@ export interface ICards {
 	techStack: string[]
 	resume:string;
 	liveDemoLink:string;
-  }
-  export interface IWrapper {
+}
+
+export interface IWrapper {
 	Component: React.ComponentType; 
 	idName: string;
 	title: string;
-  }
+}

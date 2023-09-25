@@ -3,8 +3,7 @@ import { MouseContext } from '../context/MouseContext'
 import { links } from '../utilities/data'
 import { BiSolidSun, BiSolidHome } from 'react-icons/bi'
 import { MdNightlightRound } from 'react-icons/md'
-import { assignRef } from 'hooks/useAsingRef'
-
+import { assignRef } from '../hooks/useAsingRef'
 
 const Navbar: React.FC = () => {
 	const [menu, setMenu] = useState<boolean>(true)
@@ -34,7 +33,7 @@ const Navbar: React.FC = () => {
 					className="z-30 max-md:ml-5"
 					onMouseEnter={() => handleMouseEnter?.(0, 'a')}
 					onMouseLeave={() => handleMouseLeave?.(0, 'a')}
-					ref={a => assignRef(aRefs, 0,a)}
+					ref={a => assignRef(aRefs, 0, a)}
 				>
 					<BiSolidHome size={23} className="dark:fill-white" />
 				</a>
@@ -97,6 +96,6 @@ const Navbar: React.FC = () => {
 				</p>
 			</div>
 		</div>
-	);
-};
-export default Navbar;
+	)
+}
+export default Navbar
