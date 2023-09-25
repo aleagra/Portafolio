@@ -25,11 +25,9 @@ const Background = memo(() => {
       loaded={particlesLoaded}
       options={{
         background: {
-          color: {
-            value: ["dark:bg-[#1c1c1c]", "bg-[#ffffff]"],
-          },
+          color: {},
         },
-        fpsLimit: 120,
+        fpsLimit: 240,
         interactivity: {
           events: {
             onClick: {
@@ -48,7 +46,7 @@ const Background = memo(() => {
             },
             repulse: {
               distance: 100,
-              duration: 0.6,
+              duration: 6,
             },
           },
         },
@@ -57,8 +55,8 @@ const Background = memo(() => {
             value: color,
           },
           links: {
-            color: ` `,
-            distance: 150,
+            color: ``,
+            distance: 6,
             enable: true,
             opacity: 1,
             width: 1,
@@ -79,18 +77,18 @@ const Background = memo(() => {
           number: {
             density: {
               enable: true,
-              area: 800,
+              area: 700,
             },
             value: 80,
           },
           opacity: {
-            value: 0.5,
+            value: 0.8,
           },
           shape: {
             type: "circle",
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: { min: 2, max: 5 },
           },
         },
         detectRetina: true,

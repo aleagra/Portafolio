@@ -31,10 +31,10 @@ body {
   @apply h-full bg-[#f7f7f7] dark:bg-[#1c1c1c] font-jakarta;
 }
 *::-webkit-scrollbar {
-  @apply w-[6px];
+  @apply w-[8px];
 }
 *::-webkit-scrollbar-thumb {
-  @apply h-[10px] rounded-md bg-[#898989];
+  @apply h-[12px] rounded-md bg-[#dfd3c3];
 }
 .inverted {
   mix-blend-mode: difference;
@@ -47,7 +47,6 @@ body {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  color: white; /* Cambia el color de texto inicial */
 }
 
 .button::before {
@@ -64,22 +63,21 @@ body {
 
 .button:hover {
   background-color: transparent;
-  color: #0077b5; /* Cambia el color de texto al hacer hover */
 }
 
 .button:hover::before {
   height: 100%;
-  background-color: white;
+  @apply bg-black dark:bg-white;
 }
 
 .icon-container {
   display: inline-block;
 }
 
-.icon.fill-white {
-  fill: white;
+.icon {
+  @apply fill-black dark:fill-white;
 }
 
-.button:hover .icon.fill-white {
-  fill: black;
+.button:hover .icon {
+  @apply fill-white dark:fill-black;
 }

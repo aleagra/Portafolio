@@ -36,7 +36,7 @@ const Proyect = ({
           onMouseLeave={handleMouseLeave}
           ref={divRefs}
         >
-          <section className="bg-gray-100 overflow-hidden relative sm:h-[22rem] hover:bg-gray-200 dark:text-white dark:bg-white/10 dark:hover:bg-white/20 z-[1] button dark:hover:text-black">
+          <section className="bg-white/40 hover:text-white shadow-lg overflow-hidden relative sm:h-[22rem] hover:bg-gray-200 dark:text-white dark:bg-white/10 dark:hover:bg-white/20 z-[1] button dark:hover:text-black">
             <div className="pt-4 pb-7 px-5 sm:pl-10 sm:group-even:pl-10 sm:pr-8 justify-center sm:pt-10 mr-[30rem] flex flex-col h-full sm:group-even:ml-[30rem] group-even:mr-0">
               <h3 className="text-2xl font-bold">{title}</h3>
               <p className="mt-6 leading-relaxed font-extralight">{resume}</p>
