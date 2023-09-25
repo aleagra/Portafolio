@@ -3,17 +3,12 @@ import { MouseContext } from '../context/MouseContext'
 import { links } from '../utilities/data'
 import { BiSolidSun, BiSolidHome } from 'react-icons/bi'
 import { MdNightlightRound } from 'react-icons/md'
+import { assignRef } from 'hooks/useAsingRef'
 
 
 const Navbar: React.FC = () => {
 	const [menu, setMenu] = useState<boolean>(true)
 	const { aRefs, liRefs, pRefs, handleMouseEnter, handleMouseLeave, theme, setTheme } = useContext(MouseContext) || {}
-
-	function assignRef(ref: any, index: number, value: any) {
-		if (ref && ref.current) {
-			ref.current[index] = value
-		}
-	}
 
 	useEffect(() => {
 		document.documentElement.classList.toggle('dark', theme === 'dark')

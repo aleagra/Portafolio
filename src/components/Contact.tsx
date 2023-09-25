@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { MouseContext } from "../context/MouseContext";
 import emailjs from "emailjs-com";
+import { assignRef } from "hooks/useAsingRef";
 
 const Contact: React.FC = () => {
   const [message, setMessage] = useState("");
@@ -24,13 +25,7 @@ const Contact: React.FC = () => {
           }, 2000);
         });
     }
-    function assignRef(ref: any, index: number, value: any) {
-      if (ref && ref.current) {
-        ref.current[index] = value
-      }
-    }
-  
-
+ 
   return (
     <div className="z-10 mx-auto flex gap-10 max-sm:w-full max-sm:p-6">
       <form

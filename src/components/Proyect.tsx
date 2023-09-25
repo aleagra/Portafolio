@@ -2,6 +2,7 @@ import { useContext, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { MouseContext } from "../context/MouseContext";
 import { ICards } from "types/interface";
+import { assignRef } from "hooks/useAsingRef";
 
 
 const Proyect: React.FC<ICards> = ({title,imageSrc,techStack,resume,liveDemoLink}) => {
@@ -15,12 +16,6 @@ const Proyect: React.FC<ICards> = ({title,imageSrc,techStack,resume,liveDemoLink
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-  function assignRef(ref: any, index: number, value: any) {
-		if (ref && ref.current) {
-			ref.current[index] = value
-		}
-	}
-
   
   return (
     <>

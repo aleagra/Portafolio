@@ -3,6 +3,7 @@ import { MouseContext } from "../context/MouseContext";
 import { motion } from "framer-motion";
 import { skills } from "../utilities/data";
 import Wrapper from "./wrapper";
+import { assignRef } from "hooks/useAsingRef";
 
 
 const Skills: React.FC = () => {
@@ -22,11 +23,7 @@ const Skills: React.FC = () => {
       },
     }),
   };
-  function assignRef(ref: any, index: number, value: any) {
-    if (ref && ref.current) {
-      ref.current[index] = value
-    }
-  }
+  
   return (
     <>
       <div className="z-20 w-[850px] mx-auto grid grid-cols-4 grid-rows-4 justify-center gap-8">

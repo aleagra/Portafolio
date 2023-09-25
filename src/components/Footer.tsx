@@ -3,16 +3,13 @@ import { MouseContext } from "../context/MouseContext";
 import Wrapper from "./wrapper";
 import { footer } from "../utilities/data";
 import Contact from "./Contact";
+import { assignRef } from "hooks/useAsingRef";
 
 const Footer: React.FC = () => {
   const { liRefs, handleMouseEnter, handleMouseLeave } =
     useContext(MouseContext) || {};
 
-    function assignRef(ref: any, index: number, value: any) {
-      if (ref && ref.current) {
-        ref.current[index] = value
-      }
-    }
+   
   return (
     <>
       <Contact />
