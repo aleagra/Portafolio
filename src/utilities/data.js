@@ -14,7 +14,7 @@ export const proyectsData = [
     liveDemoLink: "https://cryptowave.web.app",
     resume:
       "Single page de un traductor hecho con React para traducir textos de manera precisa, con una interfaz moderna y amigable",
-
+   
   },
   {
     imageSrc: "./CryptoWave.webp",
@@ -36,7 +36,7 @@ export const proyectsData = [
     liveDemoLink: "https://weather-me.web.app/",
     resume:
       "Un sitio web sobre el clima hecho con React y Tailwind que utiliza una API para mostrar información meteorológica en tiempo real.",
-
+  
   },
   {
     imageSrc: "./socialApp.webp",
@@ -111,3 +111,4 @@ export const footer = [
     arialabel: "Mail",
   },
 ];
+

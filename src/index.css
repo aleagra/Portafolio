@@ -3,81 +3,85 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "jakarta";
-  src: url("./assets/fonts/PlusJakartaSans-Regular.ttf");
+	font-family: 'jakarta';
+	src: url('./assets/fonts/PlusJakartaSans-Regular.ttf');
 }
 @font-face {
-  font-family: "jakarta";
-  src: url("./assets/fonts/PlusJakartaSans-Bold.ttf");
-  font-weight: bold;
+	font-family: 'jakarta';
+	src: url('./assets/fonts/PlusJakartaSans-Bold.ttf');
+	font-weight: bold;
 }
 @font-face {
-  font-family: "jakarta";
-  src: url("./assets/fonts/PlusJakartaSans-SemiBold.ttf");
-  font-weight: 600;
+	font-family: 'jakarta';
+	src: url('./assets/fonts/PlusJakartaSans-SemiBold.ttf');
+	font-weight: 600;
 }
 @font-face {
-  font-family: "jakarta";
-  src: url("./assets/fonts/PlusJakartaSans-Light.ttf");
-  font-weight: 300;
+	font-family: 'jakarta';
+	src: url('./assets/fonts/PlusJakartaSans-Light.ttf');
+	font-weight: 300;
 }
 @font-face {
-  font-family: "jakarta";
-  src: url("./assets/fonts/PlusJakartaSans-Medium.ttf");
-  font-weight: 500;
+	font-family: 'jakarta';
+	src: url('./assets/fonts/PlusJakartaSans-Medium.ttf');
+	font-weight: 500;
 }
 
 body {
-  @apply h-full bg-[#f7f7f7] dark:bg-[#1c1c1c] font-jakarta;
+	@apply h-full bg-[#f7f7f7] dark:bg-[#1c1c1c] font-jakarta;
 }
 *::-webkit-scrollbar {
-  @apply w-[8px];
+	@apply w-[8px];
 }
 *::-webkit-scrollbar-thumb {
-  @apply h-[12px] rounded-md bg-[#dfd3c3];
+	@apply h-[12px] rounded-md bg-[#dfd3c3];
 }
 .inverted {
-  mix-blend-mode: difference;
+	mix-blend-mode: difference;
 }
 .transparent {
-  background-color: transparent !important;
+	background-color: transparent !important;
 }
 .button {
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
+	background-color: transparent;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
 }
 
 .button::before {
-  content: "";
-  background-color: white;
-  width: 100%;
-  height: 0;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transition: height 0.5s ease, background-color 0.5s ease;
-  z-index: -1;
+	content: '';
+	background-color: white;
+	width: 100%;
+	height: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transition:
+		height 0.5s ease,
+		background-color 0.5s ease,
+		color 0.5s ease;
+	z-index: -1;
 }
 
 .button:hover {
-  background-color: transparent;
+	background-color: transparent;
 }
 
 .button:hover::before {
-  height: 100%;
-  @apply bg-black dark:bg-white;
+	height: 100%;
+	@apply bg-black dark:bg-white;
 }
 
 .icon-container {
-  display: inline-block;
+	display: inline-block;
 }
 
 .icon {
-  @apply fill-black dark:fill-white;
+	@apply fill-black dark:fill-white;
 }
 
 .button:hover .icon {
-  @apply fill-white dark:fill-black;
+	@apply fill-white dark:fill-black;
 }
