@@ -8,8 +8,8 @@ const Wrapper: React.FC<IWrapper> = ({ Component, idName, title }) => {
 
 	return (
 		<>
-			<section className="flex min-h-screen flex-col items-center" id={idName}>
-				<section id={idName} className="w-[1200px] flex justify-center items-center flex-col">
+			<section className="flex min-h-[90vh] flex-col items-center" id={idName}>
+				<section id={idName} className="w-[1200px] max-2xl:w-[95%] flex justify-center items-center flex-col">
 					<div className="w-fit grid-rows-[150px_1fr] justify-center z-20 m-auto mx-auto flex flex-col py-14 text-center dark:text-white max-md:p-0 max-md:py-10">
 						<div className="row-start-1 mt-16">
 							<h1

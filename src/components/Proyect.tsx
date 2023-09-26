@@ -27,18 +27,18 @@ const Proyect = ({ title, imageSrc, techStack, resume, liveDemoLink }: ICards) =
 				<a
 					href={liveDemoLink}
 					target="_blank"
-					onMouseEnter={() => handleMouseEnter && handleMouseEnter(1, 'div')}
-					onMouseLeave={() => handleMouseLeave && handleMouseLeave(1, 'div')}
+					onMouseEnter={() => handleMouseEnter?.(1, 'div')}
+					onMouseLeave={() => handleMouseLeave?.(1, 'div')}
 					ref={el => assignRef(divRefs, 1, el)}
 				>
-					<section className="bg-gray-100 rounded-lg overflow-hidden  relative sm:h-[22rem] hover:bg-gray-200 transition  dark:text-white dark:bg-white/10 dark:hover:bg-white/20 button hover:scale-105 duration-500 dark:hover:text-black">
-						<div className="pt-4 pb-7 px-5 sm:pl-10 sm:group-even:pl-10 sm:pr-8 justify-center sm:pt-10 mr-[30rem] flex flex-col h-full sm:group-even:ml-[30rem] group-even:mr-0">
-							<h3 className="text-2xl font-bold">{title}</h3>
-							<p className="mt-6 leading-relaxed font-extralight">{resume}</p>
+					<section className="bg-gray-100 rounded-lg overflow-hidden relative h-[22rem] max-lg:h-[18rem] hover:bg-gray-200 transition  dark:text-white dark:bg-white/10 dark:hover:bg-white/20 button dark:hover:text-black">
+						<div className="pt-4 pb-7 px-5 max-2xl:px-0 sm:pl-10 sm:group-even:pl-10 sm:pr-8 sm:pt-10 justify-center mr-[30rem] max-lg:mr-[25rem] flex flex-col h-full max-lg:group-even:ml-[25rem] group-even:ml-[30rem] group-even:mr-0">
+							<h3 className="text-2xl max-2xl:text-xl font-bold">{title}</h3>
+							<p className="mt-6 leading-relaxed max-2xl:text-sm font-extralight">{resume}</p>
 							<ul className="flex flex-wrap gap-2 mt-10 justify-center">
 								{techStack?.map((tag: string, index: number) => (
 									<li
-										className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/80"
+										className="bg-black/[0.7] px-3 py-1 text-[0.7rem] max-2xl:text-[0.5rem] uppercase tracking-wider text-white rounded-full dark:text-white/80"
 										key={index}
 									>
 										{tag}
@@ -50,7 +50,7 @@ const Proyect = ({ title, imageSrc, techStack, resume, liveDemoLink }: ICards) =
 						<img
 							src={imageSrc}
 							alt="Project I worked on"
-							className="absolute hidden sm:block top-0 -right-0 w-[30rem] transition group-even:right-[initial] group-even:-left-0"
+							className="absolute hidden sm:block top-0 -right-0 w-[30rem] max-lg:w-[25rem] transition group-even:right-[initial] group-even:-left-0"
 						/>
 					</section>
 				</a>

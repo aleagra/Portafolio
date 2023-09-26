@@ -84,28 +84,30 @@ const Home: React.FC = () => {
 					>
 						<a
 							href="#Proyects"
-							className="dark:bg-white/10 bg-black/60 shadow-lg text-white font-bold hover:text-white dark:hover:text-black px-7 py-3 flex items-center gap-2 rounded-full outline-none button"
+							className="dark:bg-white/10 bg-black/60 shadow-lg dark:text-white font-bold hover:text-white dark:hover:text-black px-7 py-3 flex items-center gap-2 rounded-full outline-none button"
 						>
 							Ver proyectos
 						</a>
-						<a
-							className="dark:bg-white/10 bg-[#dfd3c3] shadow-lg p-4 flex items-center gap-2 text-[1.35rem] rounded-full cursor-pointer button"
-							href="https://linkedin.com"
-							target="_blank"
-						>
-							<span className="icon-container">
-								<BiLogoLinkedin size={25} className="icon" />
-							</span>
-						</a>
-						<a
-							className="dark:bg-white/10 bg-[#dfd3c3] shadow-lg p-4 flex items-center gap-2 text-[1.35rem] rounded-full cursor-pointer button"
-							href="https://github.com"
-							target="_blank"
-						>
-							<span className="icon-container">
-								<BiLogoGithub size={25} className="icon" />
-							</span>
-						</a>
+						<div className="flex justify-around w-full">
+							<a
+								className="dark:bg-white/10 bg-[#dfd3c3] shadow-lg p-4 flex items-center gap-2 text-[1.35rem] rounded-full cursor-pointer button"
+								href="https://linkedin.com"
+								target="_blank"
+							>
+								<span className="icon-container">
+									<BiLogoLinkedin size={25} className="icon" />
+								</span>
+							</a>
+							<a
+								className="dark:bg-white/10 bg-[#dfd3c3] shadow-lg p-4 flex items-center gap-2 text-[1.35rem] rounded-full cursor-pointer button"
+								href="https://github.com"
+								target="_blank"
+							>
+								<span className="icon-container">
+									<BiLogoGithub size={25} className="icon" />
+								</span>
+							</a>
+						</div>
 					</motion.div>
 				</div>
 			</div>

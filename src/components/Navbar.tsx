@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
 				</p>
 				<div
 					className={`absolute flex w-full transition duration-500 dark:text-white md:static md:w-auto ${
-						menu ? 'top-[-70000px]' : 'top-0 max-md:bg-[#ded3c3] max-md:shadow-lg'
+						menu ? 'top-[-70000px]' : 'top-0 left-0 max-md:bg-white/30 max-md:shadow-lg'
 					}`}
 				>
 					<ul className="text-lg mx-auto flex w-fit flex-col font-bold justify-center gap-10 text-center max-md:p-4 md:flex-row md:items-center md:gap-[4vw]">
