@@ -19,7 +19,7 @@ const Contact: React.FC = () => {
 	}
 
 	return (
-		<div className="z-10 mx-auto flex gap-10 max-sm:w-full max-sm:p-6">
+		<div className="z-10 mx-auto flex gap-10 max-sm:w-full max-sm:p-6 w-full">
 			<form onSubmit={sendEmail} className="flex w-[850px] flex-col justify-center gap-y-6 max-lg:w-full">
 				{['Nombre', 'Email'].map((placeholder, index) => (
 					<input

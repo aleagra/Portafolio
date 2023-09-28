@@ -9,9 +9,9 @@ const Wrapper: React.FC<IWrapper> = ({ Component, idName, title }) => {
 	return (
 		<>
 			<section className="flex min-h-[90vh] flex-col items-center" id={idName}>
-				<section id={idName} className="w-[1200px] max-2xl:w-[95%] flex justify-center items-center flex-col">
-					<div className="w-fit grid-rows-[150px_1fr] justify-center z-20 m-auto mx-auto flex flex-col py-14 text-center dark:text-white max-md:p-0 max-md:py-10">
-						<div className="row-start-1 mt-16">
+				<section id={idName} className="w-[850px] max-lg:w-full max-lg:px-16 flex justify-center items-center flex-col">
+					<div className="w-fit grid-rows-[150px_1fr] justify-center z-20 m-auto mx-auto flex flex-col 2xl:py-14 pb-8 pt-20 text-center dark:text-white max-md:p-0 max-md:py-10">
+						<div className="row-start-1">
 							<h1
 								className=" uppercase
                 border-black text-[2rem] font-bold dark:border-white 2xl:text-[2.5rem] select-none"

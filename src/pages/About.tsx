@@ -6,7 +6,7 @@ const About: React.FC = () => {
 	const { handleMouseEnter, handleMouseLeave } = useContext(MouseContext) || {}
 
 	return (
-		<div className="w-[850px] mx-auto text-center max-2xl:w-[90%]">
+		<div className="w-full text-center">
 			<span
 				className="select-none text-[3rem]  mx-auto font-bold text-black dark:text-[#dfd3c3] max-2xl:text-[2.5rem] max-sm:text-[2rem]"
 				onMouseEnter={() => handleMouseEnter?.(5, 'p')}

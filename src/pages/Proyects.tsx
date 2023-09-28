@@ -5,7 +5,7 @@ import Wrapper from '../components/wrapper'
 
 const Proyects: React.FC = () => {
 	return (
-		<div className="w-[850px] max-2xl:w-[90%]">
+		<div className="">
 			{proyectsData.map((project, index) => (
 				<React.Fragment key={index}>
 					<Proyect
