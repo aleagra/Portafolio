@@ -1,9 +1,11 @@
-import { useEffect, useContext, useRef, memo, useState } from 'react'
+import { useEffect, useContext, useRef, useState } from 'react'
 import { MouseContext } from '../context/MouseContext'
 import { links } from '../utilities/data'
 import { BiSolidSun, BiSolidHome } from 'react-icons/bi'
 import { MdNightlightRound } from 'react-icons/md'
 import { assignRef } from '../hooks/useAsingRef'
+import { FaBars } from 'react-icons/fa'
+import { IoCloseSharp } from 'react-icons/io5'
 
 const Navbar: React.FC = () => {
 	const [menu, setMenu] = useState<boolean>(true)
@@ -27,7 +29,7 @@ const Navbar: React.FC = () => {
 
 	return (
 		<div className="fixed z-30 w-full ">
-			<div className="flex w-full px-[8rem] justify-between p-4 py-6">
+			<div className="flex w-full px-[8rem] max-md:px-6 justify-between p-4 py-6">
 				<a
 					href="#"
 					className="z-30 max-md:ml-5"
@@ -51,11 +53,11 @@ const Navbar: React.FC = () => {
 					)}
 				</p>
 				<div
-					className={`absolute flex w-full transition duration-500 dark:text-white md:static md:w-auto ${
-						menu ? 'top-[-70000px]' : 'top-0 left-0 max-md:bg-white/30 max-md:shadow-lg'
+					className={`absolute flex w-full transition duration-500 dark:text-white  md:static md:w-auto ${
+						menu ? 'top-[-70000px]' : 'top-0 left-0 dark:bg-[#1c1c1c] bg-white  max-md:shadow-lg w-full'
 					}`}
 				>
-					<ul className="text-lg mx-auto flex w-fit flex-col font-bold justify-center gap-10 text-center max-md:p-4 md:flex-row md:items-center md:gap-[4vw]">
+					<ul className="text-lg mx-auto flex w-fit flex-col font-bold justify-center gap-10 text-center max-md:p-4 max-md:py-6 md:flex-row md:items-center md:gap-[4vw]">
 						{links.map((item, index) => (
 							<li
 								key={index}
@@ -92,7 +94,7 @@ const Navbar: React.FC = () => {
 					onMouseLeave={() => handleMouseLeave?.(0, 'a')}
 					ref={aRef}
 				>
-					<BiSolidHome size={23} className="dark:fill-white" />
+					{menu ? <FaBars size={20} className="dark:fill-white" /> : <IoCloseSharp size={27} className="dark:fill-white" />}
 				</p>
 			</div>
 		</div>

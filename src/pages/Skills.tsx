@@ -24,10 +24,10 @@ const Skills: React.FC = () => {
 
 	return (
 		<>
-			<ul className="mx-auto w-full grid grid-cols-4 grid-rows-4 justify-center gap-8">
+			<ul className="mx-auto w-full grid grid-cols-4 grid-rows-4 justify-center gap-8 max-md:grid-cols-2">
 				{skills.map(({ name, imgSrc }, index) => (
 					<motion.li
-						className="dark:bg-white hover:text-white shadow-lg bg-slate-100 text-black button flex flex-col justify-between items-center list-none dark:hover:text-black borderBlack rounded-xl px-5 2xl:py-3  2xl:pt-5 pt-2 dark:bg-white/10 dark:text-white/80"
+						className="dark:bg-white hover:text-white shadow-lg bg-slate-100 text-black button flex flex-col justify-between items-center list-none dark:hover:text-black borderBlack rounded-xl px-2 2xl:py-3 pt-5 dark:bg-white/10 dark:text-white/80"
 						key={index}
 						variants={fadeInAnimationVariants}
 						initial="initial"
@@ -41,7 +41,7 @@ const Skills: React.FC = () => {
 						ref={el => assignRef(divRefs, 1, el)}
 					>
 						<div className="w-fit mx-auto">{imgSrc}</div>
-						<h1 className="py-2 max-2xl:py-1 text-center dark:opacity-40 font-bold select-none">{name}</h1>
+						<h1 className="py-2 max-2xl:py-1 text-center dark:opacity-40 font-bold select-none max-md:text-sm">{name}</h1>
 					</motion.li>
 				))}
 			</ul>

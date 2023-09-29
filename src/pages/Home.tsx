@@ -75,7 +75,7 @@ const Home: React.FC = () => {
 					</div>
 
 					<motion.div
-						className="flex flex-col sm:flex-row items-center justify-center gap-3 px-4 mt-4 text-lg font-medium"
+						className="flex sm:flex-row items-center justify-center gap-3 px-4 mt-4 text-lg font-medium"
 						initial={{ opacity: 0, y: 100 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{
@@ -84,26 +84,26 @@ const Home: React.FC = () => {
 					>
 						<a
 							href="#Proyects"
-							className="dark:bg-white/10 bg-black/60 shadow-lg text-white font-bold hover:text-white dark:hover:text-black px-7 py-3 flex items-center gap-2 rounded-full outline-none button"
+							className="dark:bg-white/10 border-2 border-black/20 bg-black/60 shadow-md dark:text-white font-bold hover:text-white max-md:text-sm dark:hover:text-black px-7 py-3 flex items-center gap-2 rounded-full outline-none button"
 						>
 							Ver proyectos
 						</a>
 						<a
-							className="dark:bg-white/10 bg-[#dfd3c3] shadow-lg p-4 flex items-center gap-2 text-[1.35rem] rounded-full cursor-pointer button"
+							className="dark:bg-white/10 border-2 border-black/20 bg-[#dfd3c3] shadow-md p-4 max-md:p-2 flex items-center gap-2 text-[1.35rem] rounded-full cursor-pointer button"
 							href="https://linkedin.com"
 							target="_blank"
 						>
 							<span className="icon-container">
-								<BiLogoLinkedin size={25} className="icon" />
+								<BiLogoLinkedin size={25} className="icon max-md:w-4" />
 							</span>
 						</a>
 						<a
-							className="dark:bg-white/10 bg-[#dfd3c3] shadow-lg p-4 flex items-center gap-2 text-[1.35rem] rounded-full cursor-pointer button"
+							className="dark:bg-white/10 border-2 border-black/20 bg-[#dfd3c3] shadow-md p-4 max-md:p-2 flex items-center gap-2 text-[1.35rem] rounded-full cursor-pointer button"
 							href="https://github.com"
 							target="_blank"
 						>
 							<span className="icon-container">
-								<BiLogoGithub size={25} className="icon" />
+								<BiLogoGithub size={25} className="icon max-md:w-4" />
 							</span>
 						</a>
 					</motion.div>
