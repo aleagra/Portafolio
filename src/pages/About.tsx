@@ -8,7 +8,7 @@ const About: React.FC = () => {
 	return (
 		<div className="w-full text-center">
 			<span
-				className="select-none text-[3rem]  mx-auto font-bold text-black dark:text-white/80 max-2xl:text-[2.5rem] max-md:text-[1.5rem]"
+				className="select-none text-[3rem]  mx-auto font-bold text-black dark:text-white/80 max-2xl:text-[2.5rem] max-md:text-[1.3rem]"
 				onMouseEnter={() => handleMouseEnter?.(5, 'p')}
 				onMouseLeave={() => handleMouseLeave?.(5, 'p')}
 			>

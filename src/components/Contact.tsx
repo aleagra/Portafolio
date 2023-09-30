@@ -19,14 +19,14 @@ const Contact: React.FC = () => {
 	}
 
 	return (
-		<div className="z-10 mx-auto flex gap-10 max-sm:w-full max-sm:p-6 w-full">
+		<div className="z-10 mx-auto flex gap-10 max-sm:w-full w-full">
 			<form onSubmit={sendEmail} className="flex w-[850px] flex-col justify-center gap-y-6 max-lg:w-full">
 				{['Nombre', 'Email'].map((placeholder, index) => (
 					<input
 						key={index}
 						autoComplete="off"
 						type="text"
-						className="rounded-xl text-xl p-3 px-6 py-3 shadow-lg outline-none focus:bg-[#dfd3c3] focus:text-white dark:bg-white/10 dark:text-white dark:focus:bg-white/30 dark:focus:text-black"
+						className="rounded-xl text-xl p-3 px-6 py-3 shadow-lg outline-none border-2 border-black/10 focus:bg-slate-100 transition-colors duration-300 focus:text-white dark:bg-white/10 dark:text-white dark:focus:bg-white/30 dark:focus:text-black"
 						placeholder={placeholder}
 						name={index === 0 ? 'name' : 'email'}
 						onMouseEnter={() => handleMouseEnter?.(1, 'div')}
@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
 				))}
 				<textarea
 					autoComplete="off"
-					className="h-[150px] resize-none rounded-xl px-6 py-3 text-xl border-2 border-black/20 outline-none focus:bg-[#dfd3c3] focus:text-white dark:bg-white/10 dark:text-white dark:focus:bg-white/30 dark:focus:text-black max-lg:w-full max-sm:h-[240px] 2xl:h-[220px]"
+					className="h-[150px] resize-none rounded-xl px-6 py-3 text-xl border-2 border-black/10 outline-none focus:bg-slate-100 transition-colors duration-300 focus:text-white dark:bg-white/10 dark:text-white dark:focus:bg-white/30 dark:focus:text-black max-lg:w-full max-sm:h-[240px] 2xl:h-[220px]"
 					name="message"
 					id="message"
 					placeholder="Descripción"
@@ -49,7 +49,7 @@ const Contact: React.FC = () => {
 				></textarea>
 				<button
 					type="submit"
-					className="flex h-[3rem] w-fit mx-auto px-16 mt-2 button items-center border-2 border-black/20 gap-2 dark:bg-white/10 whitespace-nowrap rounded-xl bg-transparent text-xl font-bold dark:text-white transition-all duration-500 hover:text-white dark:hover:text-black uppercase transform hover:scale-105"
+					className="flex h-[3rem] w-fit mx-auto px-16 mt-2 button items-center bg-white border-2 border-black/10 gap-2 dark:bg-white/10 whitespace-nowrap rounded-xl text-xl font-bold dark:text-white transition-all duration-500 hover:text-white dark:hover:text-black uppercase transform hover:scale-105"
 					onMouseEnter={() => handleMouseEnter?.(1, 'div')}
 					onMouseLeave={() => handleMouseLeave?.(1, 'div')}
 					ref={el => assignRef(divRefs, 1, el)}

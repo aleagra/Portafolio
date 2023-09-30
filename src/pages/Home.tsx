@@ -26,7 +26,7 @@ const Home: React.FC = () => {
 	}, [])
 
 	return (
-		<section className="relative z-[1] flex select-none flex-col items-center pt-24 max-md:pt-[8rem]" id="Home">
+		<section className="relative z-[1] flex select-none flex-col items-center pt-24 max-md:pt-[8rem] 2xl:mb-20" id="Home">
 			<div className="flex flex-col items-center 2xl:mt-40 mt-5  mb-10 max-xl:w-[100%] max-lg:flex-col md:pt-0 2xl:w-[85%]">
 				<div className="mt-[-5.5rem] flex w-full flex-col justify-center outline-none 2xl:w-1/2">
 					<motion.div

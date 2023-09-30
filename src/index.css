@@ -26,7 +26,9 @@
 	src: url('./assets/fonts/PlusJakartaSans-Medium.ttf');
 	font-weight: 500;
 }
-
+* {
+	@apply scroll-smooth;
+}
 body {
 	@apply h-full bg-[#f7f7f7] dark:bg-[#1c1c1c] font-jakarta;
 }
@@ -71,7 +73,7 @@ body {
 
 .button:hover::before {
 	height: 100%;
-	@apply bg-black dark:bg-white;
+	@apply bg-black/90 dark:bg-white;
 }
 
 .icon-container {
@@ -84,4 +86,16 @@ body {
 
 .button:hover .icon {
 	@apply fill-white dark:fill-black;
+}
+
+.text-stroke {
+	-webkit-text-stroke: 3px black;
+	color: white;
+	opacity: 60%;
+}
+
+.dark .text-stroke {
+	-webkit-text-stroke: 3px white;
+	color: transparent;
+	opacity: 80%;
 }

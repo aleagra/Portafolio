@@ -24,10 +24,10 @@ const Skills: React.FC = () => {
 
 	return (
 		<>
-			<ul className="mx-auto w-full grid grid-cols-4 grid-rows-4 justify-center gap-8 max-md:grid-cols-2">
+			<ul className="mx-auto w-full grid grid-cols-4 grid-rows-4 justify-center gap-8 max-md:gap-4 max-md:grid-cols-2 mb-10">
 				{skills.map(({ name, imgSrc }, index) => (
 					<motion.li
-						className="dark:bg-white hover:text-white shadow-lg bg-slate-100 text-black button flex flex-col justify-between items-center list-none dark:hover:text-black borderBlack rounded-xl px-2 2xl:py-3 pt-5 dark:bg-white/10 dark:text-white/80"
+						className="dark:bg-white border-2 border-black/10 hover:text-white shadow-lg bg-slate-100 text-black button flex flex-col justify-between items-center list-none dark:hover:text-black borderBlack rounded-xl px-2 2xl:py-3 pt-5 dark:bg-white/10 dark:text-white/80"
 						key={index}
 						variants={fadeInAnimationVariants}
 						initial="initial"
