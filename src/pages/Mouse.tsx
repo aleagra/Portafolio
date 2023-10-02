@@ -54,7 +54,7 @@ const Mouse: React.FC<MouseProps> = () => {
 	return (
 		<motion.div
 			ref={dropletRef}
-			className={`pointer-events-none fixed z-20 h-5 w-5 rounded-full bg-[#ded3c3] transition-all duration-1000 dark:bg-white max-xl:hidden `}
+			className={`pointer-events-none fixed z-20 h-5 w-5 rounded-full bg-[#ded3c3] dark:bg-white max-lg:hidden `}
 			animate={{
 				scale: scaleRef.current,
 				transition: {

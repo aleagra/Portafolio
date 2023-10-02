@@ -91,7 +91,6 @@ body {
 .text-stroke {
 	-webkit-text-stroke: 3px black;
 	color: white;
-	opacity: 60%;
 }
 
 .dark .text-stroke {

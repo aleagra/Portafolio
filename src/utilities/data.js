@@ -11,7 +11,7 @@ export const proyectsData = [
     description: "Traductor",
     techStack: ["React", "Tailwind", "Netlify"],
     repositoryLink: "https://github.com/aleagra/Proyecto-Wallet",
-    liveDemoLink: "https://cryptowave.web.app",
+    liveDemoLink: "https://eztranslate.netlify.app",
     resume:
       "Single page de un traductor hecho con React para traducir textos de manera precisa, con una interfaz moderna y amigable",
    
@@ -33,7 +33,7 @@ export const proyectsData = [
     description: "Pagina del clima",
     techStack: ["React", "Tailwind", "Firebase"],
     repositoryLink: "https://github.com/aleagra/WeatherMe-page",
-    liveDemoLink: "https://weather-me.web.app/",
+    liveDemoLink: "https://weather-me.web.app",
     resume:
       "Un sitio web sobre el clima hecho con React y Tailwind que utiliza una API para mostrar información meteorológica en tiempo real.",
   

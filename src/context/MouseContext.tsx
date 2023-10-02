@@ -1,10 +1,13 @@
-import { ReactNode, RefObject, createContext, useCallback, useRef, useState } from 'react'
+import { ReactNode, RefObject, createContext, useCallback, useEffect, useRef, useState } from 'react'
 import { IMouseContextValue } from 'types/interface'
 
 export const MouseContext = createContext<IMouseContextValue | null>(null)
 
 function MouseContextProvider({ children }: { children: ReactNode }) {
-	const [theme, setTheme] = useState('dark')
+	const [theme, setTheme] = useState(() => {
+		const storedTheme = localStorage.getItem('theme')
+		return storedTheme ? storedTheme : 'dark'
+	})
 	const liRefs = useRef([])
 	const pRefs = useRef([])
 	const aRefs = useRef([])
@@ -47,6 +50,9 @@ function MouseContextProvider({ children }: { children: ReactNode }) {
 		}
 	}, [])
 
+	useEffect(() => {
+		localStorage.setItem('theme', theme)
+	}, [theme])
 	return (
 		<MouseContext.Provider
 			value={{

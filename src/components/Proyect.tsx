@@ -32,7 +32,7 @@ const Proyect = ({ title, imageSrc, techStack, resume, liveDemoLink }: ICards) =
 					ref={el => assignRef(divRefs, 1, el)}
 				>
 					<section className="bg-gray-100 rounded-lg border-2 border-black/10 overflow-hidden relative h-[22rem] max-lg:h-[18rem] hover:text-white transition  dark:text-white dark:bg-white/10 dark:hover:bg-white/20 button dark:hover:text-black">
-						<div className="pt-4 pb-7 px-5 max-md:py-4 max-2xl:px-0 sm:pl-10 sm:group-even:pl-10 sm:pr-8 sm:pt-10 justify-center mr-[30rem] max-lg:mr-[10rem] max-md:mx-10 flex flex-col h-full max-lg:group-even:ml-[10rem] group-even:ml-[30rem] max-md:group-even:mx-10 group-even:mr-0">
+						<div className="pt-4 pb-7 px-5 max-md:py-4 max-2xl:px-0 sm:pl-10 sm:group-even:pl-10 sm:pr-8 sm:pt-10 justify-center mr-[30rem] max-lg:mr-[25rem] max-md:mx-10 flex flex-col h-full max-lg:group-even:ml-[25rem] group-even:ml-[30rem] max-md:group-even:mx-10 group-even:mr-0">
 							<h3 className="text-2xl max-2xl:text-xl font-bold">{title}</h3>
 							<p className="mt-6 leading-relaxed max-2xl:text-sm font-extralight">{resume}</p>
 							<ul className="flex flex-wrap gap-2 mt-10 justify-center">
@@ -50,7 +50,7 @@ const Proyect = ({ title, imageSrc, techStack, resume, liveDemoLink }: ICards) =
 						<img
 							src={imageSrc}
 							alt="Project I worked on"
-							className="absolute hidden sm:block top-0 -right-0 w-[30rem] max-lg:w-[10rem] max-md:hidden transition group-even:right-[initial] group-even:-left-0"
+							className="absolute top-0 -right-0 w-[30rem] max-lg:w-[25rem] max-md:hidden transition group-even:right-[initial] group-even:-left-0"
 						/>
 					</section>
 				</a>

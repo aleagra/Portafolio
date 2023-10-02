@@ -4,9 +4,10 @@ import { MouseContext } from '../context/MouseContext'
 import animationData from '../assets/lottie.json'
 import { motion } from 'framer-motion'
 import { BiLogoGithub, BiLogoLinkedin } from 'react-icons/bi'
+import { assignRef } from '../hooks/useAsingRef'
 
 const Home: React.FC = () => {
-	const { handleMouseEnter, handleMouseLeave } = useContext(MouseContext) || {}
+	const { handleMouseEnter, handleMouseLeave, pRefs, divRefs } = useContext(MouseContext) || {}
 	const animationContainer = useRef<HTMLDivElement | null>(null)
 
 	useEffect(() => {
@@ -37,7 +38,7 @@ const Home: React.FC = () => {
 							duration: 0.2,
 						}}
 					>
-						<div ref={animationContainer} className="mx-auto max-2xl:w-[40%] max-sm:w-[85%] 2xl:w-[75%]" />
+						<div ref={animationContainer} className="mx-auto max-2xl:w-[40%] max-sm:w-[85%] 2xl:w-[75%] opacity-90" />
 					</motion.div>
 				</div>
 				<div className="flex w-full flex-col justify-center items-center text-center 2xl:w-1/2">
@@ -46,6 +47,7 @@ const Home: React.FC = () => {
 							className="m-0 p-0  text-[5rem] font-bold leading-[6rem] text-black dark:text-white max-2xl:text-[4rem] max-lg:text-[4rem] max-sm:text-[2rem] max-sm:leading-[5rem]"
 							onMouseEnter={() => handleMouseEnter?.(1, 'p')}
 							onMouseLeave={() => handleMouseLeave?.(1, 'p')}
+							ref={el => assignRef(pRefs, 1, el)}
 							initial={{ opacity: 0, scale: 0 }}
 							animate={{ opacity: 1, scale: 1 }}
 							transition={{
@@ -61,6 +63,7 @@ const Home: React.FC = () => {
 							className="2xl:text-[2rem] text-[1.5rem] text-black/80 dark:text-[#dfd3c3]/80 font-bold max-sm:text-lg"
 							onMouseEnter={() => handleMouseEnter?.(2, 'p')}
 							onMouseLeave={() => handleMouseLeave?.(2, 'p')}
+							ref={el => assignRef(pRefs, 2, el)}
 							initial={{ opacity: 0, scale: 0 }}
 							animate={{ opacity: 1, scale: 1 }}
 							transition={{
@@ -85,6 +88,9 @@ const Home: React.FC = () => {
 						<a
 							href="#Proyects"
 							className="dark:bg-white/10 border-2 border-black/20 bg-black/60 shadow-md dark:text-white font-bold hover:text-white max-md:text-sm dark:hover:text-black px-7 py-3 flex items-center gap-2 rounded-full outline-none button"
+							onMouseEnter={() => handleMouseEnter?.(1, 'div')}
+							onMouseLeave={() => handleMouseLeave?.(1, 'div')}
+							ref={el => assignRef(divRefs, 1, el)}
 						>
 							Ver proyectos
 						</a>
@@ -92,6 +98,9 @@ const Home: React.FC = () => {
 							className="dark:bg-white/10 border-2 border-black/20 bg-[#dfd3c3] shadow-md p-4 max-md:p-2 flex items-center gap-2 text-[1.35rem] rounded-full cursor-pointer button"
 							href="https://linkedin.com"
 							target="_blank"
+							onMouseEnter={() => handleMouseEnter?.(1, 'div')}
+							onMouseLeave={() => handleMouseLeave?.(1, 'div')}
+							ref={el => assignRef(divRefs, 1, el)}
 						>
 							<span className="icon-container">
 								<BiLogoLinkedin size={25} className="icon max-md:w-4" />
@@ -101,6 +110,9 @@ const Home: React.FC = () => {
 							className="dark:bg-white/10 border-2 border-black/20 bg-[#dfd3c3] shadow-md p-4 max-md:p-2 flex items-center gap-2 text-[1.35rem] rounded-full cursor-pointer button"
 							href="https://github.com"
 							target="_blank"
+							onMouseEnter={() => handleMouseEnter?.(1, 'div')}
+							onMouseLeave={() => handleMouseLeave?.(1, 'div')}
+							ref={el => assignRef(divRefs, 1, el)}
 						>
 							<span className="icon-container">
 								<BiLogoGithub size={25} className="icon max-md:w-4" />
