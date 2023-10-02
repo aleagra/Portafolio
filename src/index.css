@@ -39,7 +39,7 @@ body {
 	@apply h-[12px] bg-[#dfd3c3];
 }
 .inverted {
-	mix-blend-mode: difference;
+	@apply mix-blend-difference;
 }
 .transparent {
 	background-color: transparent !important;
