@@ -9,7 +9,7 @@ const Contact: React.FC = () => {
 	const { divRefs, handleMouseEnter, handleMouseLeave } = useContext(MouseContext) || {}
 	const [formData, setFormData] = useState({
 		name: '',
-		email: '',
+		mail: '',
 		message: '',
 	})
 
@@ -18,10 +18,9 @@ const Contact: React.FC = () => {
 
 		emailjs.sendForm('service_ccbjvsj', 'template_qehuqna', e.target as HTMLFormElement, '4pYds05KBhAOwyuvQ').then(() => {
 			notify()
-
 			setFormData({
 				name: '',
-				email: '',
+				mail: '',
 				message: '',
 			})
 		})
@@ -39,46 +38,49 @@ const Contact: React.FC = () => {
 			theme: 'light',
 		})
 
-	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-		const { name, value } = e.target
-		setFormData(prevState => ({
-			...prevState,
-			[name]: value,
-		}))
-	}
-
 	return (
 		<div className="z-10 mx-auto flex gap-10 max-sm:w-full w-full">
 			<form onSubmit={sendEmail} className="flex w-[850px] flex-col justify-center gap-y-6 max-lg:w-full">
-				{['Nombre', 'Email'].map((placeholder, index) => (
-					<input
-						key={index}
-						autoComplete="off"
-						type="text"
-						className="rounded-xl text-xl p-3 px-6 py-3 shadow-lg outline-none border-2 border-black/10 focus:bg-slate-100 transition-colors duration-300 bg-white/10 dark:text-white dark:focus:bg-white/30 dark:focus:text-black"
-						placeholder={placeholder}
-						name={index === 0 ? 'name' : 'email'}
-						onMouseEnter={() => handleMouseEnter?.(1, 'div')}
-						onMouseLeave={() => handleMouseLeave?.(1, 'div')}
-						ref={el => assignRef(divRefs, 1, el)}
-						required
-						title={index === 1 ? 'Ingresa una dirección de correo válido' : undefined}
-					/>
-				))}
-				<textarea
+				<input
 					autoComplete="off"
-					className="h-[150px] resize-none rounded-xl px-6 py-3 text-xl border-2 border-black/10 outline-none focus:bg-slate-100 transition-colors duration-300 dark:bg-white/10 dark:text-white dark:focus:bg-white/30 focus:text-black max-lg:w-full max-sm:h-[240px] 2xl:h-[220px]"
-					name="message"
-					id="message"
-					placeholder="Descripción"
+					type="text"
+					className="rounded-xl text-xl p-3 px-6 py-3 shadow-lg outline-none border-2 border-black/10 focus:bg-slate-100 bg-white/10 dark:text-white dark:focus:bg-white/30 dark:focus:text-black"
+					placeholder={'Nombre'}
 					onMouseEnter={() => handleMouseEnter?.(1, 'div')}
 					onMouseLeave={() => handleMouseLeave?.(1, 'div')}
 					ref={el => assignRef(divRefs, 1, el)}
 					required
+					value={formData.name}
+					onChange={e => setFormData({ ...formData, name: e.target.value })}
+				/>
+				<input
+					autoComplete="off"
+					type="email"
+					className="rounded-xl text-xl p-3 px-6 py-3 shadow-lg outline-none border-2 border-black/10 focus:bg-slate-100 bg-white/10 dark:text-white dark:focus:bg-white/30 dark:focus:text-black"
+					placeholder={'Correo electronico'}
+					onMouseEnter={() => handleMouseEnter?.(1, 'div')}
+					onMouseLeave={() => handleMouseLeave?.(1, 'div')}
+					ref={el => assignRef(divRefs, 1, el)}
+					required
+					value={formData.mail}
+					onChange={e => setFormData({ ...formData, mail: e.target.value })}
+				/>
+				<textarea
+					autoComplete="off"
+					className="h-[150px] resize-none rounded-xl px-6 py-3 shadow-lg text-xl border-2 border-black/10 outline-none focus:bg-slate-100 dark:bg-white/10 dark:text-white dark:focus:bg-white/30 focus:text-black max-lg:w-full max-sm:h-[240px] 2xl:h-[220px]"
+					name="message"
+					id="message"
+					value={formData.message}
+					placeholder="Descripción"
+					onMouseEnter={() => handleMouseEnter?.(1, 'div')}
+					onMouseLeave={() => handleMouseLeave?.(1, 'div')}
+					ref={el => assignRef(divRefs, 1, el)}
+					onChange={e => setFormData({ ...formData, message: e.target.value })}
+					required
 				></textarea>
 				<button
 					type="submit"
-					className="flex h-[3rem] w-fit mx-auto px-16 mt-2 button items-center bg-white border-2 border-black/10 gap-2 dark:bg-white/10 whitespace-nowrap rounded-xl text-xl font-bold dark:text-white transition-all duration-500 hover:text-white dark:hover:text-black uppercase transform hover:scale-105"
+					className="flex h-[3rem] w-fit shadow-lg mx-auto px-16 mt-2 button items-center bg-white border-2 border-black/10 gap-2 dark:bg-white/10 whitespace-nowrap rounded-xl text-xl font-bold dark:text-white transition-all duration-500 hover:text-white dark:hover:text-black uppercase transform hover:scale-105"
 					onMouseEnter={() => handleMouseEnter?.(1, 'div')}
 					onMouseLeave={() => handleMouseLeave?.(1, 'div')}
 					ref={el => assignRef(divRefs, 1, el)}
