@@ -36,6 +36,7 @@ const Navbar: React.FC = () => {
 					onMouseEnter={() => handleMouseEnter?.(0, 'a')}
 					onMouseLeave={() => handleMouseLeave?.(0, 'a')}
 					ref={a => assignRef(aRefs, 0, a)}
+					aria-label={`Home`}
 				>
 					<BiSolidHome size={23} className="dark:fill-white" />
 				</a>

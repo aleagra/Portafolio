@@ -44,6 +44,7 @@ const Contact: React.FC = () => {
 				<input
 					autoComplete="off"
 					type="text"
+					name="name"
 					className="rounded-xl text-xl p-3 px-6 py-3 shadow-lg outline-none border-2 border-black/10 focus:bg-slate-100 bg-white/10 dark:text-white dark:focus:bg-white/30 dark:focus:text-black"
 					placeholder={'Nombre'}
 					onMouseEnter={() => handleMouseEnter?.(1, 'div')}
@@ -56,6 +57,7 @@ const Contact: React.FC = () => {
 				<input
 					autoComplete="off"
 					type="email"
+					name="email"
 					className="rounded-xl text-xl p-3 px-6 py-3 shadow-lg outline-none border-2 border-black/10 focus:bg-slate-100 bg-white/10 dark:text-white dark:focus:bg-white/30 dark:focus:text-black"
 					placeholder={'Correo electronico'}
 					onMouseEnter={() => handleMouseEnter?.(1, 'div')}

@@ -5,6 +5,7 @@ import animationData from '../assets/lottie.json'
 import { motion } from 'framer-motion'
 import { BiLogoGithub, BiLogoLinkedin } from 'react-icons/bi'
 import { assignRef } from '../hooks/useAsingRef'
+import { footer } from '../utilities/data'
 
 const Home: React.FC = () => {
 	const { handleMouseEnter, handleMouseLeave, pRefs, divRefs } = useContext(MouseContext) || {}
@@ -96,11 +97,12 @@ const Home: React.FC = () => {
 						</a>
 						<a
 							className="dark:bg-white/10 border-2 border-black/20 bg-[#dfd3c3] shadow-md p-4 max-md:p-2 flex items-center gap-2 text-[1.35rem] rounded-full cursor-pointer button"
-							href="https://linkedin.com"
+							href={footer[0].href}
 							target="_blank"
 							onMouseEnter={() => handleMouseEnter?.(1, 'div')}
 							onMouseLeave={() => handleMouseLeave?.(1, 'div')}
 							ref={el => assignRef(divRefs, 1, el)}
+							aria-label={`Perfil de LinkedIn`}
 						>
 							<span className="icon-container">
 								<BiLogoLinkedin size={25} className="icon max-md:w-4" />
@@ -108,11 +110,12 @@ const Home: React.FC = () => {
 						</a>
 						<a
 							className="dark:bg-white/10 border-2 border-black/20 bg-[#dfd3c3] shadow-md p-4 max-md:p-2 flex items-center gap-2 text-[1.35rem] rounded-full cursor-pointer button"
-							href="https://github.com"
+							href={footer[1].href}
 							target="_blank"
 							onMouseEnter={() => handleMouseEnter?.(1, 'div')}
 							onMouseLeave={() => handleMouseLeave?.(1, 'div')}
 							ref={el => assignRef(divRefs, 1, el)}
+							aria-label={`Perfil de GitHub`}
 						>
 							<span className="icon-container">
 								<BiLogoGithub size={25} className="icon max-md:w-4" />
